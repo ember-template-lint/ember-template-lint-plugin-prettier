@@ -24,6 +24,9 @@
   "author": "Cyrille David <'cyrille@qonto.eu'>",
   "license": "Apache-2.0",
   "private": false,
+  "peerDependencies": {
+    "ember-template-lint": "^1.3.0"
+  },
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^5.0.0",
