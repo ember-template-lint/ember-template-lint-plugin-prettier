@@ -10,6 +10,10 @@ let prettier;
 
 const Rule = require("ember-template-lint").Rule;
 
+function isFile(loc) {
+  return loc.start && loc.start.line === 1 && loc.column.line === 0
+}
+
 const PrettierRule = class Prettier extends Rule {
   visitor() {
     if (prettier && prettier.clearConfigCache) {
@@ -18,6 +22,12 @@ const PrettierRule = class Prettier extends Rule {
 
     return {
       Program(node) {
+        // in hbs AST a Program may be: a Template or a Block
+        // we want to apply this rule only to files, not to blocks contents
+        if (!isFile(node.loc)) {
+          return;
+        }
+
         const source = this.sourceForNode(node);
         const filepath = this.templateEnvironmentData.moduleName;
 
