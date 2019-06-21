@@ -4,16 +4,16 @@ const PrettierRule = class Prettier extends Rule {
   visitor() {
     return {
 			// TODO: turn this example into a real thing
-      // CommentStatement(node) {
-      //   if (node.value.trim() === "") {
-      //     this.log({
-      //       message: "comments cannot be empty",
-      //       line: node.loc && node.loc.start.line,
-      //       column: node.loc && node.loc.start.column,
-      //       source: this.sourceForNode(node)
-      //     });
-      //   }
-      // }
+      CommentStatement(node) {
+        if (node.value.trim() === "hello") {
+          this.log({
+            message: "comments cannot contain hello",
+            line: node.loc && node.loc.start.line,
+            column: node.loc && node.loc.start.column,
+            source: this.sourceForNode(node)
+          });
+        }
+      }
     };
   }
 };

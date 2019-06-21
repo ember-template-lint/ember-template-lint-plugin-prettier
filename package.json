@@ -41,5 +41,8 @@
   },
   "engines": {
     "node": "8.* || >= 10.*"
+  },
+  "dependencies": {
+    "prettier-linter-helpers": "^1.0.0"
   }
 }
