@@ -1,0 +1,42 @@
+{
+  "name": "ember-template-lint-plugin-prettier",
+  "version": "0.0.1",
+  "description": "A prettier plugin for ember-template-lint",
+  "keywords": [
+    "ember-template-lint",
+    "ember-template-lint-plugin",
+    "handlebars",
+    "glimmer",
+    "prettier"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "changelog": "lerna-changelog",
+    "lint:js": "eslint . --cache",
+    "lint:md": "prettylint ./*.md",
+    "test": "jest",
+    "format": "yarn prettier '**/*.{hbs,js,json,md,yml}' --write"
+  },
+  "repository": "git@github.com:dcyriller/ember-template-lint-plugin-prettier.git",
+  "author": "Cyrille David <'cyrille@qonto.eu'>",
+  "license": "Apache-2.0",
+  "private": false,
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^5.0.0",
+    "eslint-plugin-jest": "^22.7.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.8.0",
+    "jest-watch-typeahead": "^0.3.1",
+    "lerna-changelog": "^0.8.2",
+    "prettier": "^1.18.2",
+    "prettylint": "^1.0.0"
+  },
+  "engines": {
+    "node": "8.* || >= 10.*"
+  }
+}
