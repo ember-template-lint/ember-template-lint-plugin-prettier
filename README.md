@@ -10,6 +10,19 @@ It runs [Prettier](https://github.com/prettier/prettier) as a rule. Then it repo
 yarn add -D ember-template-lint-plugin-prettier
 ```
 
-## Use
+## Usage
 
-TODO
+```
+module.exports = {
+  extends: 'recommended',
+
+  plugins: ['ember-template-lint-plugin-prettier'],
+
+  rules: {
+    prettier: true,
+    'no-abstract-roles': true,
+    'no-obsolete-elements': true,
+    'no-positive-tabindex': true,
+  },
+};
+```
