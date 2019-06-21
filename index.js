@@ -1,3 +1,4 @@
+// inspiration here: https://github.com/prettier/eslint-plugin-prettier/blob/master/eslint-plugin-prettier.js
 const {
   showInvisibles,
   generateDifferences
