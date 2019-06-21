@@ -7,7 +7,7 @@ It runs [Prettier](https://github.com/prettier/prettier) as a rule. Then it repo
 ## Install
 
 ```sh
-yarn add -D ember-template-lint-plugin-prettier
+yarn add -D prettier ember-template-lint-plugin-prettier
 ```
 
 ## Usage
