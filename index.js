@@ -11,7 +11,7 @@ let prettier;
 const Rule = require("ember-template-lint").Rule;
 
 function isFile(loc) {
-  return loc.start && loc.start.line === 1 && loc.column.line === 0
+  return loc.start && loc.start.line === 1 && loc.start.column === 0
 }
 
 const PrettierRule = class Prettier extends Rule {
