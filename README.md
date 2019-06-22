@@ -33,3 +33,7 @@ module.exports = {
 - A recommended ember-template-lint rule is conflicting with prettier formatting: `self-closing-void-elements`. [According to this issue](https://github.com/ember-template-lint/ember-template-lint/issues/691), it should find a solution.
 
 I have been using the plugin to lint / format / lint [ember-observer](https://www.emberobserver.com/). I don't have additional issues. But this list could probably be appeneded if we were formatting against an other code base!
+
+## Credits
+
+This plugin has been inspired by [the eslint plugin](https://github.com/prettier/eslint-plugin-prettier) for Prettier.
