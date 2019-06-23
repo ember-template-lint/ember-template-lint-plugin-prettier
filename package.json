@@ -10,9 +10,9 @@
     "prettier"
   ],
   "files": [
-    "index.js"
+    "prettier.js"
   ],
-  "main": "index.js",
+  "main": "prettier.js",
   "scripts": {
     "changelog": "lerna-changelog",
     "lint:js": "eslint . --cache",

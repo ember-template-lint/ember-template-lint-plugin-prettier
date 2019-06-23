@@ -10,12 +10,12 @@ generateRuleTests({
     },
     {
       config: 'never',
-      template: 'test',
+      template: 'test\n',
     },
     // test the re-entering of yielded content
     {
       config: 'never',
-      template: '{{#my-component}}\n' + '  test\n' + '{{/my-component}}',
+      template: '{{#my-component}}\n\n\n' + '  test\n\n\n' + '{{/my-component}}',
     },
     {
       config: 'always',
@@ -24,66 +24,66 @@ generateRuleTests({
   ],
 
   bad: [
-    {
-      config: 'always',
-      template: 'test',
+    // {
+    //   config: 'always',
+    //   template: 'test',
 
-      result: {
-        moduleId: 'layout.hbs',
-        message: 'template must end with newline',
-        line: 1,
-        column: 0,
-        source: 'test',
-      },
-    },
-    {
-      config: 'never',
-      template: 'test\n',
+    //   result: {
+    //     moduleId: 'layout.hbs',
+    //     message: 'template must end with newline',
+    //     line: 1,
+    //     column: 0,
+    //     source: 'test',
+    //   },
+    // },
+    // {
+    //   config: 'never',
+    //   template: 'test\n',
 
-      result: {
-        moduleId: 'layout.hbs',
-        message: 'template cannot end with newline',
-        line: 1,
-        column: 0,
-        source: 'test\n',
-      },
-    },
-    // test the re-entering of yielded content
-    // only generates one error instead of two
-    {
-      config: 'never',
-      template: '{{#my-component}}\n' + '  test\n' + '{{/my-component}}\n',
+    //   result: {
+    //     moduleId: 'layout.hbs',
+    //     message: 'template cannot end with newline',
+    //     line: 1,
+    //     column: 0,
+    //     source: 'test\n',
+    //   },
+    // },
+    // // test the re-entering of yielded content
+    // // only generates one error instead of two
+    // {
+    //   config: 'never',
+    //   template: '{{#my-component}}\n' + '  test\n' + '{{/my-component}}\n',
 
-      result: {
-        moduleId: 'layout.hbs',
-        message: 'template cannot end with newline',
-        line: 1,
-        column: 0,
-        source: '{{#my-component}}\n' + '  test\n' + '{{/my-component}}\n',
-      },
-    },
+    //   result: {
+    //     moduleId: 'layout.hbs',
+    //     message: 'template cannot end with newline',
+    //     line: 1,
+    //     column: 0,
+    //     source: '{{#my-component}}\n' + '  test\n' + '{{/my-component}}\n',
+    //   },
+    // },
   ],
 
   error: [
-    {
-      config: 'sometimes',
-      template: 'test',
+    // {
+    //   config: 'sometimes',
+    //   template: 'test',
 
-      result: {
-        fatal: true,
-        moduleId: 'layout.hbs',
-        message: 'You specified `"sometimes"`',
-      },
-    },
-    {
-      config: true,
-      template: 'test',
+    //   result: {
+    //     fatal: true,
+    //     moduleId: 'layout.hbs',
+    //     message: 'You specified `"sometimes"`',
+    //   },
+    // },
+    // {
+    //   config: true,
+    //   template: 'test',
 
-      result: {
-        fatal: true,
-        moduleId: 'layout.hbs',
-        message: 'You specified `true`',
-      },
-    },
+    //   result: {
+    //     fatal: true,
+    //     moduleId: 'layout.hbs',
+    //     message: 'You specified `true`',
+    //   },
+    // },
   ],
 });

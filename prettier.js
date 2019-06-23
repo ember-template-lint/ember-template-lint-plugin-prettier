@@ -123,7 +123,7 @@ module.exports = {
   // Define configurations for this plugin that can be extended by the base configuration
   configurations: {
     recommended: {
-      plugins: ['ember-template-lint-plugin-prettier'],
+      plugins: ['prettier'],
       rules: {
         prettier: true,
       },

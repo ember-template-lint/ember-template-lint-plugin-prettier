@@ -1,5 +1,6 @@
 // extrated from:
 // https://github.com/ember-template-lint/ember-template-lint/blob/v1.3.0/lib/helpers/rule-test-harness.js
+const plugin = require('../../prettier');
 
 const assert = require('assert');
 
@@ -78,6 +79,7 @@ function generateRuleTests({
 
     groupMethodBefore(function() {
       let fullConfig = {
+        plugins: [plugin],
         rules: {},
       };
       fullConfig.rules[name] = config = passedConfig;
