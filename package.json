@@ -10,14 +10,14 @@
     "prettier"
   ],
   "files": [
-    "index.js"
+    "prettier.js"
   ],
-  "main": "index.js",
+  "main": "prettier.js",
   "scripts": {
     "changelog": "lerna-changelog",
     "lint:js": "eslint . --cache",
     "lint:md": "prettylint ./*.md",
-    "test": "jest",
+    "test": "mocha --recursive",
     "format": "yarn prettier '**/*.{hbs,js,json,md,yml}' --write"
   },
   "repository": "git@github.com:dcyriller/ember-template-lint-plugin-prettier.git",
@@ -29,14 +29,14 @@
     "prettier": "^1.18.2"
   },
   "devDependencies": {
+    "ember-template-lint": "^1.3.0",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^5.0.0",
-    "eslint-plugin-jest": "^22.7.0",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "jest": "^24.8.0",
-    "jest-watch-typeahead": "^0.3.1",
     "lerna-changelog": "^0.8.2",
+    "mocha": "^6.1.4",
+    "prettier": "^1.18.2",
     "prettylint": "^1.0.0"
   },
   "engines": {

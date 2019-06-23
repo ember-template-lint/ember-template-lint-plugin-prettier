@@ -5,12 +5,20 @@ module.exports = {
     "plugin:node/recommended",
     "plugin:prettier/recommended"
   ],
-  plugins: ["prettier", "jest"],
+  plugins: ["prettier"],
   env: {
-    node: true,
-    "jest/globals": true
+    node: true
   },
   rules: {
     "prettier/prettier": ["error"]
-  }
+  },
+
+  overrides: [
+    {
+      files: ["test/**/*.js"],
+      env: {
+        mocha: true
+      }
+    }
+  ]
 };
