@@ -1,16 +1,13 @@
-const {
-  showInvisibles,
-  generateDifferences
-} = require("prettier-linter-helpers");
+const { showInvisibles, generateDifferences } = require('prettier-linter-helpers');
 
 const { INSERT, DELETE, REPLACE } = generateDifferences;
 
 let prettier;
 
-const Rule = require("ember-template-lint").Rule;
+const Rule = require('ember-template-lint').Rule;
 
 function isFile(loc) {
-  return loc.start && loc.start.line === 1 && loc.start.column === 0
+  return loc.start && loc.start.line === 1 && loc.start.column === 0;
 }
 
 const PrettierRule = class Prettier extends Rule {
@@ -32,15 +29,15 @@ const PrettierRule = class Prettier extends Rule {
 
         if (!prettier) {
           // Prettier is expensive to load, so only load it if needed.
-          prettier = require("prettier");
+          prettier = require('prettier');
         }
 
         const prettierRcOptions = prettier.resolveConfig.sync(filepath, {
-          editorconfig: true
+          editorconfig: true,
         });
 
         const prettierFileInfo = prettier.getFileInfo.sync(filepath, {
-          ignorePath: ".prettierignore"
+          ignorePath: '.prettierignore',
         });
 
         // Skip if file is ignored using a .prettierignore file
@@ -48,14 +45,9 @@ const PrettierRule = class Prettier extends Rule {
           return;
         }
 
-        const prettierOptions = Object.assign(
-          {},
-          { parser: "glimmer" },
-          prettierRcOptions,
-          {
-            filepath
-          }
-        );
+        const prettierOptions = Object.assign({}, { parser: 'glimmer' }, prettierRcOptions, {
+          filepath,
+        });
 
         let prettierSource;
         try {
@@ -65,24 +57,24 @@ const PrettierRule = class Prettier extends Rule {
             throw err;
           }
 
-          let message = "Parsing error: " + err.message;
+          let message = 'Parsing error: ' + err.message;
 
           // Prettier's message contains a codeframe style preview of the
           // invalid code and the line/column at which the error occured.
           // ESLint shows those pieces of information elsewhere already so
           // remove them from the message
           if (err.codeFrame) {
-            message = message.replace(`\n${err.codeFrame}`, "");
+            message = message.replace(`\n${err.codeFrame}`, '');
           }
           if (err.loc) {
-            message = message.replace(/ \(\d+:\d+\)$/, "");
+            message = message.replace(/ \(\d+:\d+\)$/, '');
           }
 
           this.log({
             message,
             line: node.loc && node.loc.start.line,
             column: node.loc && node.loc.start.column,
-            source: this.sourceForNode(node)
+            source: this.sourceForNode(node),
           });
 
           return;
@@ -92,23 +84,19 @@ const PrettierRule = class Prettier extends Rule {
           const differences = generateDifferences(source, prettierSource);
 
           differences.forEach(difference => {
-            let message = "";
+            let message = '';
 
             switch (difference.operation) {
               case INSERT:
-                message = `Insert {{ ${showInvisibles(
-                  difference.insertText
-                )} }}`;
+                message = `Insert {{ ${showInvisibles(difference.insertText)} }}`;
                 break;
               case DELETE:
-                message = `Delete {{ ${showInvisibles(
-                  difference.deleteText
-                )} }}`;
+                message = `Delete {{ ${showInvisibles(difference.deleteText)} }}`;
                 break;
               case REPLACE:
-                message = `Replace {{ ${showInvisibles(
-                  difference.deleteText
-                )} }} with {{ ${difference.insertText} }}`;
+                message = `Replace {{ ${showInvisibles(difference.deleteText)} }} with {{ ${
+                  difference.insertText
+                } }}`;
                 break;
             }
 
@@ -116,29 +104,29 @@ const PrettierRule = class Prettier extends Rule {
               message,
               line: node.loc && node.loc.start.line,
               column: node.loc && node.loc.start.column,
-              source: this.sourceForNode(node)
+              source: this.sourceForNode(node),
             });
           });
         }
-      }
+      },
     };
   }
 };
 
 module.exports = {
-  name: "ember-template-lint-plugin-prettier",
+  name: 'ember-template-lint-plugin-prettier',
 
   rules: {
-    prettier: PrettierRule
+    prettier: PrettierRule,
   },
 
   // Define configurations for this plugin that can be extended by the base configuration
   configurations: {
     recommended: {
-      plugins: ["ember-template-lint-plugin-prettier"],
+      plugins: ['ember-template-lint-plugin-prettier'],
       rules: {
-        prettier: true
-      }
-    }
-  }
+        prettier: true,
+      },
+    },
+  },
 };
