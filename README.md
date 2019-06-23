@@ -16,7 +16,7 @@ yarn add -D prettier ember-template-lint-plugin-prettier
 module.exports = {
   extends: 'recommended',
 
-  plugins: ['prettier'],
+  plugins: ['ember-template-lint-plugin-prettier'],
 
   rules: {
     prettier: true,
