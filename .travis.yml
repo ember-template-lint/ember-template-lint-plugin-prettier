@@ -1,7 +1,7 @@
 ---
 language: node_js
 node_js:
-  - '8'
+  - "8"
 
 sudo: false
 dist: trusty
@@ -26,8 +26,8 @@ jobs:
   include:
     # runs linting and tests with current locked deps
 
-    - stage: 'Tests'
-      name: 'Tests'
+    - stage: "Tests"
+      name: "Tests"
       install:
         - yarn install --non-interactive
       script:

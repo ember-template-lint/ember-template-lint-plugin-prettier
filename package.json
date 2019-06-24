@@ -10,9 +10,10 @@
     "prettier"
   ],
   "files": [
-    "prettier.js"
+    "ember-template-lint-plugin-prettier.js",
+    "rules"
   ],
-  "main": "prettier.js",
+  "main": "ember-template-lint-plugin-prettier.js",
   "scripts": {
     "changelog": "lerna-changelog",
     "lint:js": "eslint . --cache",
