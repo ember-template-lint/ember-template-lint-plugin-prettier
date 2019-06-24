@@ -19,7 +19,7 @@
     "lint:js": "eslint . --cache",
     "lint:md": "prettylint ./*.md",
     "test": "mocha --recursive",
-    "format": "yarn prettier '**/*.{hbs,js,json,md,yml}' --write --ignore-path test/unit/files/**/*.hbs"
+    "format": "yarn prettier '**/*.{hbs,js,json,md,yml}' --write"
   },
   "repository": "git@github.com:dcyriller/ember-template-lint-plugin-prettier.git",
   "author": "Cyrille David <'cyrille@qonto.eu'>",
