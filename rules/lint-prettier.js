@@ -12,7 +12,7 @@ function isFile(loc) {
   return loc.start && loc.start.line === 1 && loc.start.column === 0;
 }
 
-const PrettierRule = class Prettier extends Rule {
+module.exports = class Prettier extends Rule {
   visitor() {
     return {
       Program: {
@@ -115,12 +115,4 @@ const PrettierRule = class Prettier extends Rule {
       },
     };
   }
-};
-
-module.exports = {
-  name: 'ember-template-lint-plugin-prettier',
-
-  rules: {
-    prettier: PrettierRule,
-  },
 };

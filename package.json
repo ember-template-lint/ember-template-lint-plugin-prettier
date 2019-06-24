@@ -10,15 +10,16 @@
     "prettier"
   ],
   "files": [
-    "prettier.js"
+    "ember-template-lint-plugin-prettier.js",
+    "rules"
   ],
-  "main": "prettier.js",
+  "main": "ember-template-lint-plugin-prettier.js",
   "scripts": {
     "changelog": "lerna-changelog",
     "lint:js": "eslint . --cache",
     "lint:md": "prettylint ./*.md",
     "test": "mocha --recursive",
-    "format": "yarn prettier '**/*.{hbs,js,json,md,yml}' --write"
+    "format": "yarn prettier '**/*.{hbs,js,json,md,yml}' --write --ignore-path test/unit/files/**/*.hbs"
   },
   "repository": "git@github.com:dcyriller/ember-template-lint-plugin-prettier.git",
   "author": "Cyrille David <'cyrille@qonto.eu'>",

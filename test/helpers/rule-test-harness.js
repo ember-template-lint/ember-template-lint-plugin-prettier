@@ -1,6 +1,6 @@
 // extrated from:
 // https://github.com/ember-template-lint/ember-template-lint/blob/v1.3.0/lib/helpers/rule-test-harness.js
-const plugin = require('../../prettier');
+const plugin = require('../../ember-template-lint-plugin-prettier');
 
 const fs = require('fs');
 const assert = require('assert');
