@@ -33,7 +33,7 @@ module.exports = class Prettier extends Rule {
           }
 
           const source = this.sourceForNode(node);
-          const filepath = this.templateEnvironmentData.moduleName;
+          const filepath = this.templateEnvironmentData.moduleName + ".hbs";
 
           if (!prettier) {
             // Prettier is expensive to load, so only load it if needed.
