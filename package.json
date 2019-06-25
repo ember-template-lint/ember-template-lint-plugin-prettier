@@ -1,6 +1,6 @@
 {
   "name": "ember-template-lint-plugin-prettier",
-  "version": "0.0.9",
+  "version": "1.0.0-beta.0",
   "description": "A prettier plugin for ember-template-lint",
   "keywords": [
     "ember-template-lint",
