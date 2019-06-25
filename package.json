@@ -12,7 +12,8 @@
   "files": [
     "ember-template-lint-plugin-prettier.js",
     "rules",
-    "utils"
+    "utils",
+    "docs"
   ],
   "main": "ember-template-lint-plugin-prettier.js",
   "scripts": {
