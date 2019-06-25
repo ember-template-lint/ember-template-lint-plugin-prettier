@@ -5,6 +5,8 @@ const {
   generateDifferences
 } = require("prettier-linter-helpers");
 
+const getLocFromIndex = require("../utils/get-loc-from-index");
+
 const { INSERT, DELETE, REPLACE } = generateDifferences;
 
 let prettier;
@@ -85,7 +87,7 @@ module.exports = class Prettier extends Rule {
               message,
               line: node.loc && node.loc.start.line,
               column: node.loc && node.loc.start.column,
-              source: this.sourceForNode(node)
+              source
             });
 
             return;
@@ -96,31 +98,30 @@ module.exports = class Prettier extends Rule {
 
             differences.forEach(difference => {
               let message = "";
+              let { line, column } = getLocFromIndex(
+                difference.offset,
+                this.source
+              );
 
               switch (difference.operation) {
                 case INSERT:
-                  message = `Insert {{ ${showInvisibles(
+                  message = `Insert \`${showInvisibles(
                     difference.insertText
-                  )} }}`;
+                  )}\``;
                   break;
                 case DELETE:
-                  message = `Delete {{ ${showInvisibles(
+                  message = `Delete \`${showInvisibles(
                     difference.deleteText
-                  )} }}`;
+                  )}}\``;
                   break;
                 case REPLACE:
-                  message = `Replace {{ ${showInvisibles(
+                  message = `Replace \`${showInvisibles(
                     difference.deleteText
-                  )} }} with {{ ${difference.insertText} }}`;
+                  )}\` with \`${difference.insertText}}\``;
                   break;
               }
 
-              this.log({
-                message,
-                line: node.loc && node.loc.start.line,
-                column: node.loc && node.loc.start.column,
-                source: this.sourceForNode(node)
-              });
+              this.log({ message, line, column, source });
             });
           }
         }

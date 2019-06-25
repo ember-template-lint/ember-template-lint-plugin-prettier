@@ -15,7 +15,7 @@ module.exports = {
 
   overrides: [
     {
-      files: ["test/**/*.js"],
+      files: ["test/**/*-test.js", "test/helpers/rule-test-harness.js"],
       env: {
         mocha: true
       }
