@@ -10,6 +10,12 @@ It runs [Prettier](https://github.com/prettier/prettier) as a rule. Then it repo
 yarn add -D prettier ember-template-lint-plugin-prettier
 ```
 
+The project's Prettier version will then be used by the prettier rule.
+
+Note that `prettier` and (of course) `ember-template-lint` are required as peerDependencies of this package.
+
+Also, this plugin don't provide a recommended set of rules (that you often provide in the `extends` config key). You'll have to enable them manually (see [Usage](#Usage)).
+
 ## Usage
 
 ```
@@ -19,21 +25,22 @@ module.exports = {
   plugins: ['ember-template-lint-plugin-prettier'],
 
   rules: {
-    prettier: true,
-    'no-abstract-roles': true,
-    'no-obsolete-elements': true,
-    'no-positive-tabindex': true,
+    prettier: true, // turn this plugin's rule on
+    "eol-last": false, // or `"eol-last": "never"`
+    "self-closing-void-elements": false // idem
   },
 };
 ```
 
-## TODO
+## Details
 
-- Fix eof in prettier: [a PR is opened](https://github.com/prettier/prettier/pull/6243)
-- A recommended ember-template-lint rule is conflicting with prettier formatting: `self-closing-void-elements`. [According to this issue](https://github.com/ember-template-lint/ember-template-lint/issues/691), it should find a solution.
+The two ember-template-lint rules mentioned above are conflicting with Prettier formatting if you turn them on. More details there:
 
-I have been using the plugin to lint / format / lint [ember-observer](https://www.emberobserver.com/). I don't have additional issues. But this list could probably be appeneded if we were formatting against an other code base!
+- `eol-last`: [a PR is opened](https://github.com/prettier/prettier/pull/6243) on Prettier to append newlines to handelbars files. Prettier does that for every other language.
+- `self-closing-void-elements` rule could be removed from the set of recommended rules [according to this issue](https://github.com/ember-template-lint/ember-template-lint/issues/691).
+
+I have tried the plugin on [ember-observer](https://www.emberobserver.com/): to lint / format / lint the templates. I don't have other issue. But this list could probably be appeneded if we were formatting against an other code base!
 
 ## Credits
 
-This plugin has been inspired by [the eslint plugin](https://github.com/prettier/eslint-plugin-prettier) for Prettier.
+This plugin has been inspired by [the prettier plugin](https://github.com/prettier/eslint-plugin-prettier) for Eslint.
