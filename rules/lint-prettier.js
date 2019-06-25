@@ -112,12 +112,12 @@ module.exports = class Prettier extends Rule {
                 case DELETE:
                   message = `Delete \`${showInvisibles(
                     difference.deleteText
-                  )}}\``;
+                  )}\``;
                   break;
                 case REPLACE:
                   message = `Replace \`${showInvisibles(
                     difference.deleteText
-                  )}\` with \`${difference.insertText}}\``;
+                  )}\` with \`${difference.insertText}\``;
                   break;
               }
 

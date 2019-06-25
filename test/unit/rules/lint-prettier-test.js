@@ -24,7 +24,7 @@ generateRuleTests({
       path: "test/unit/files/valid/dummy.hbs",
       result: {
         moduleId: "layout.hbs",
-        message: "Delete `⏎}`",
+        message: "Delete `⏎`",
         line: 1,
         column: 34,
         source: "{{#my-component}}{{/my-component}}\n"
@@ -35,7 +35,7 @@ generateRuleTests({
       path: "test/unit/files/valid/block.hbs",
       result: {
         moduleId: "layout.hbs",
-        message: "Delete `⏎}`",
+        message: "Delete `⏎`",
         line: 1,
         column: 4,
         source: "test\n"
@@ -47,7 +47,7 @@ generateRuleTests({
       result: {
         moduleId: "layout.hbs",
         message:
-          "Replace `⏎⏎test⏎⏎{{/my-component}}⏎` with `test{{/my-component}}}`",
+          "Replace `⏎⏎test⏎⏎{{/my-component}}⏎` with `test{{/my-component}}`",
         line: 1,
         column: 17,
         source: "{{#my-component}}\n\ntest\n\n{{/my-component}}\n"
@@ -58,7 +58,7 @@ generateRuleTests({
       path: "test/unit/files/invalid/lines.hbs",
       result: {
         moduleId: "layout.hbs",
-        message: "Replace `⏎{{/my-component}}⏎` with `{{/my-component}}}`",
+        message: "Replace `⏎{{/my-component}}⏎` with `{{/my-component}}`",
         line: 2,
         column: 7,
         source:
