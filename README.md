@@ -24,7 +24,7 @@ yarn add -D prettier ember-template-lint-plugin-prettier
 
 As peerDependencies, `prettier` and `ember-template-lint` will have to be installed in your project. Prettier version local to the project will be used (not any global one!).
 
-Also, this plugin doesn't come with a recommended set of rules (that you often provide in the `extends` config key). At least of today! You'll have to enable them manually (see [Recommended configuration](#Recommended configuration)).
+Also, this plugin doesn't come with a recommended set of rules (that you often provide in the `extends` config key). At least for today! You'll have to enable them manually (see "Recommended configuration").
 
 ## Recommended configuration
 
@@ -53,9 +53,9 @@ module.exports = {
 
 Handlebars support is still experimental in Prettier! So, between Prettier upgrades, you'll probably find out that your code is formatted in a slightly different way. Also, a few bug fixes are in progress. You can follow the work in progress [here](https://github.com/jgwhite/prettier/issues/1).
 
-#### Special warning: bare strings in templates
+#### Special warning: bare strings in templates (ie. )
 
-Are you're using bare strings in your templates? If you don't use a library like [ember-intl](https://github.com/ember-intl/ember-intl) that provides you with a helper to inject strings in templates, probably!
+Are you're using bare strings in your templates? If you're unsure, you can lint your templates against [this rule](https://github.com/ember-template-lint/ember-template-lint/blob/master/docs/rule/no-bare-strings.md).
 
 If you do so, you implicitely relie on your templates whitespaces. As such, you most probably want to wait before using this package. Indeed, whitespaces / newlines handling is still not 100% settled in Prettier.
 
