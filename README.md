@@ -57,7 +57,7 @@ Handlebars support is still experimental in Prettier! So, between Prettier upgra
 
 Are you're using bare strings in your templates? If you're unsure, you can lint your templates against [this rule](https://github.com/ember-template-lint/ember-template-lint/blob/master/docs/rule/no-bare-strings.md).
 
-If you do so, you implicitely relie on your templates whitespaces. As such, you most probably want to wait before using this package. Indeed, whitespaces / newlines handling is still not 100% settled in Prettier.
+If you do so, you implicitly rely on your templates whitespaces. As such, you most probably want to wait before using this package. Indeed, whitespaces / newlines handling is still not 100% settled in Prettier.
 
 ## Tips
 
@@ -76,9 +76,9 @@ You may want to define these two scripts in your package.json:
 
 ## Examples
 
-[Here is an early example](https://github.com/dcyriller/client/pull/1) of usage in [emberoberver](https://emberobserver.com/) source code. As you can see, it's illustrating the whitespaces / newlines issue with bare strings.
+[Here is an early example](https://github.com/dcyriller/client/pull/1) of usage in [emberobserver](https://emberobserver.com/) source code. As you can see, it's illustrating the whitespaces / newlines issue with bare strings.
 
-[Here is an other early example](https://github.com/dcyriller/ember-osf-web/pull/1) of usage in [ember-osf-web](https://github.com/CenterForOpenScience/ember-osf-web).
+[Here is another early example](https://github.com/dcyriller/ember-osf-web/pull/1) of usage in [ember-osf-web](https://github.com/CenterForOpenScience/ember-osf-web).
 
 ## Credits
 
