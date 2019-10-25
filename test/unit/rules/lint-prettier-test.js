@@ -4,24 +4,25 @@ generateRuleTests({
   name: "prettier",
 
   good: [
-    {
-      config: true,
-      path: "test/unit/files/valid/empty.hbs"
-    },
-    {
-      config: true,
-      path: "test/unit/files/invalid/block-disabled-one.hbs"
-    },
-    {
-      config: true,
-      path: "test/unit/files/invalid/block-disabled-all.hbs"
-    }
+    ``,
+    `{{! template-lint-disable prettier}}
+{{#my-component}}
+
+test
+
+{{/my-component}}`,
+    `{{! template-lint-disable }}
+{{#my-component}}
+
+test
+
+{{/my-component}}`
   ],
 
   bad: [
     {
       config: true,
-      path: "test/unit/files/valid/dummy.hbs",
+      template: "{{#my-component}}{{/my-component}}\n",
       result: {
         moduleId: "layout.hbs",
         message: "Delete `⏎`",
@@ -32,7 +33,7 @@ generateRuleTests({
     },
     {
       config: true,
-      path: "test/unit/files/valid/block.hbs",
+      template: "test\n",
       result: {
         moduleId: "layout.hbs",
         message: "Delete `⏎`",
@@ -43,26 +44,32 @@ generateRuleTests({
     },
     {
       config: true,
-      path: "test/unit/files/invalid/block.hbs",
+      template: `{{#my-component}}
+
+test
+
+{{/my-component}}`,
       result: {
         moduleId: "layout.hbs",
-        message:
-          "Replace `⏎⏎test⏎⏎{{/my-component}}⏎` with `test{{/my-component}}`",
+        message: "Replace `⏎⏎test⏎⏎` with `test`",
         line: 1,
         column: 17,
-        source: "{{#my-component}}\n\ntest\n\n{{/my-component}}\n"
+        source: "{{#my-component}}\n\ntest\n\n{{/my-component}}"
       }
     },
     {
       config: true,
-      path: "test/unit/files/invalid/lines.hbs",
+      template: `{{#my-component class="class1 class2"}}
+  test
+
+{{/my-component}}`,
       result: {
         moduleId: "layout.hbs",
-        message: "Replace `⏎{{/my-component}}⏎` with `{{/my-component}}`",
+        message: "Delete `⏎`",
         line: 2,
         column: 7,
         source:
-          '{{#my-component class="class1 class2"}}\n  test\n\n{{/my-component}}\n'
+          '{{#my-component class="class1 class2"}}\n  test\n\n{{/my-component}}'
       }
     }
   ]

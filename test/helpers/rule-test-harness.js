@@ -2,7 +2,6 @@
 // https://github.com/ember-template-lint/ember-template-lint/blob/v1.3.0/lib/helpers/rule-test-harness.js
 const plugin = require("../../ember-template-lint-plugin-prettier");
 
-const fs = require("fs");
 const assert = require("assert");
 
 const Linter = require("ember-template-lint");
@@ -30,8 +29,7 @@ function generateRuleTests({
   groupingMethod(name, function() {
     let linter, config, meta;
 
-    function verify(path) {
-      const template = fs.readFileSync(path, { encoding: "utf8" });
+    function verify(template) {
       linter.config.rules[name] = config;
       return linter.verify({ source: template, moduleId: meta.moduleId });
     }
@@ -69,10 +67,10 @@ function generateRuleTests({
     }
 
     bad.forEach(function(badItem) {
-      let path = badItem.path;
+      let template = badItem.template;
 
       testMethod(
-        `logs a message in the console when given \`${path}\``,
+        `logs a message in the console when given \`${template}\``,
         function() {
           let expectedResults = badItem.results || [badItem.result];
 
@@ -82,7 +80,7 @@ function generateRuleTests({
             config = badItem.config;
           }
 
-          let actual = verify(path);
+          let actual = verify(template);
 
           if (badItem.fatal) {
             assert.strictEqual(actual.length, 1); // can't have more than one fatal error
@@ -97,20 +95,23 @@ function generateRuleTests({
       );
 
       if (!skipDisabledTests) {
-        testMethod(`passes with \`${path}\` when rule is disabled`, function() {
-          config = false;
-          meta = parseMeta(badItem);
-          let actual = verify(path);
+        testMethod(
+          `passes with \`${template}\` when rule is disabled`,
+          function() {
+            config = false;
+            meta = parseMeta(badItem);
+            let actual = verify(template);
 
-          assert.deepStrictEqual(actual, []);
-        });
+            assert.deepStrictEqual(actual, []);
+          }
+        );
       }
     });
 
     good.forEach(function(goodItem) {
-      let path = goodItem.path;
+      let template = goodItem.template;
 
-      testMethod(`passes when given \`${path}\``, function() {
+      testMethod(`passes when given \`${template}\``, function() {
         meta = parseMeta(goodItem);
         let actual;
 
@@ -121,7 +122,7 @@ function generateRuleTests({
             config = goodItem.config;
           }
 
-          actual = verify(path);
+          actual = verify(template);
         }
 
         assert.deepStrictEqual(actual, []);
