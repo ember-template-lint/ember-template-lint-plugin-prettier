@@ -1,7 +1,13 @@
-const generateRuleTests = require("../../helpers/rule-test-harness");
+const generateRuleTests = require("ember-template-lint/lib/helpers/rule-test-harness");
+const plugin = require("../../../ember-template-lint-plugin-prettier");
 
 generateRuleTests({
   name: "prettier",
+
+  groupMethodBefore: beforeEach,
+  groupingMethod: describe,
+  testMethod: it,
+  plugins: [plugin],
 
   good: [
     ``,
