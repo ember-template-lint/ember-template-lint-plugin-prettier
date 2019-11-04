@@ -2,6 +2,9 @@
 
 ## v1.0.0 (2019-11-04)
 
+#### :memo: Documentation
+* [#18](https://github.com/dcyriller/ember-template-lint-plugin-prettier/pull/18) fix a few typos ([@efx](https://github.com/efx))
+
 #### :house: Internal
 * [#47](https://github.com/dcyriller/ember-template-lint-plugin-prettier/pull/47) templateEnvironmentData: Cleanup deprecation ([@dcyriller](https://github.com/dcyriller))
 * [#48](https://github.com/dcyriller/ember-template-lint-plugin-prettier/pull/48) CI: Log ember-template-lint and prettier versions ([@dcyriller](https://github.com/dcyriller))
