@@ -3,17 +3,21 @@ language: node_js
 node_js:
   - "8"
 
-sudo: false
-dist: trusty
-
-cache:
-  yarn: true
-
 branches:
   only:
     - master
     # npm version tags
     - /^v\d+\.\d+\.\d+/
+
+cache:
+  yarn: true
+
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH=$HOME/.yarn/bin:$PATH
+
+install:
+  - yarn install --frozen-lockfile --non-interactive
 
 env:
   global:
@@ -27,14 +31,14 @@ jobs:
     # runs linting and tests with current locked deps
 
     - stage: "Tests"
-      name: "Tests"
-      install:
-        - yarn install --non-interactive
+      name: "ember-template-lint 1.6.1"
       script:
         - yarn lint:js
         - yarn lint:md
         - yarn test
-
-before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
-  - export PATH=$HOME/.yarn/bin:$PATH
+    - name: "ember-template-lint latest"
+      install: yarn install --no-lockfile
+      script:
+        - yarn lint:js
+        - yarn lint:md
+        - yarn test
