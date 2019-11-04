@@ -1,0 +1,31 @@
+# CHANGELOG
+
+## v1.0.0 (2019-11-04)
+
+#### :house: Internal
+* [#47](https://github.com/dcyriller/ember-template-lint-plugin-prettier/pull/47) templateEnvironmentData: Cleanup deprecation ([@dcyriller](https://github.com/dcyriller))
+* [#48](https://github.com/dcyriller/ember-template-lint-plugin-prettier/pull/48) CI: Log ember-template-lint and prettier versions ([@dcyriller](https://github.com/dcyriller))
+* [#46](https://github.com/dcyriller/ember-template-lint-plugin-prettier/pull/46) Cleanup tests / CI / upgrade process for the two peerDependencies ([@dcyriller](https://github.com/dcyriller))
+* [#40](https://github.com/dcyriller/ember-template-lint-plugin-prettier/pull/40) Inline test files ([@dcyriller](https://github.com/dcyriller))
+* [#24](https://github.com/dcyriller/ember-template-lint-plugin-prettier/pull/24) dependabot: Auto-merge in-range dependencies ([@dcyriller](https://github.com/dcyriller))
+
+#### Committers: 3
+- Cyrille David ([@dcyriller](https://github.com/dcyriller))
+- Eli Flanagan ([@efx](https://github.com/efx))
+- [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
+
+
+## v1.0.0-beta.0 (2019-06-25)
+
+#### :bug: Bug Fix
+* [#15](https://github.com/dcyriller/ember-template-lint-plugin-prettier/pull/15) Remove trailing closing curly bracket ([@dcyriller](https://github.com/dcyriller))
+* [#16](https://github.com/dcyriller/ember-template-lint-plugin-prettier/pull/16) Take into account overrides key in .prettierrc.js ([@dcyriller](https://github.com/dcyriller))
+
+#### :memo: Documentation
+* [#13](https://github.com/dcyriller/ember-template-lint-plugin-prettier/pull/13) Add a doc file for prettier rule ([@dcyriller](https://github.com/dcyriller))
+
+#### :house: Internal
+* [#14](https://github.com/dcyriller/ember-template-lint-plugin-prettier/pull/14) Setup dependabot ([@dcyriller](https://github.com/dcyriller))
+
+#### Committers: 1
+- Cyrille David ([@dcyriller](https://github.com/dcyriller))
