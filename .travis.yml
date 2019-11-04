@@ -36,3 +36,9 @@ jobs:
         - yarn lint:js
         - yarn lint:md
         - yarn test
+    - name: "ember-template-lint latest"
+      install: yarn install --no-lockfile
+      script:
+        - yarn lint:js
+        - yarn lint:md
+        - yarn test
