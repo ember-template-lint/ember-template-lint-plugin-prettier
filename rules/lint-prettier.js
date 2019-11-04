@@ -18,6 +18,11 @@ function isFile(loc) {
 }
 
 module.exports = class Prettier extends Rule {
+  constructor(options) {
+    super(options);
+    this.filePath = options.moduleName + ".hbs";
+  }
+
   visitor() {
     return {
       Program: {
@@ -33,7 +38,15 @@ module.exports = class Prettier extends Rule {
           }
 
           const source = this.sourceForNode(node);
-          const filepath = this.templateEnvironmentData.moduleName + ".hbs";
+          // Following
+          // https://github.com/ember-template-lint/ember-template-lint/commit/a7bf55cf36ee90d0460e7cb94e7ca4731aaa4be7
+          // `templateEnvironmentData` is deprecated (in v1.8.0).
+          // This code aims at remaining compatible with
+          // ember-template-lint@>=1.3.0. The ternary might be removed when
+          // upgrading the peerDependency to ember-template-lint@2.
+          let filepath = this.filePath
+            ? this.filePath
+            : this.templateEnvironmentData.moduleName + ".hbs";
 
           if (!prettier) {
             // Prettier is expensive to load, so only load it if needed.
