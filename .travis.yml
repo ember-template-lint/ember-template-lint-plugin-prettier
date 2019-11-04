@@ -19,6 +19,12 @@ before_install:
 install:
   - yarn install --frozen-lockfile --non-interactive
 
+script:
+  - yarn list --pattern "ember-template-lint|prettier" --depth=0
+  - yarn lint:js
+  - yarn lint:md
+  - yarn test
+
 env:
   global:
     # See https://git.io/vdao3 for details.
@@ -32,13 +38,6 @@ jobs:
 
     - stage: "Tests"
       name: "ember-template-lint 1.6.1"
-      script:
-        - yarn lint:js
-        - yarn lint:md
-        - yarn test
+
     - name: "ember-template-lint latest"
       install: yarn install --no-lockfile
-      script:
-        - yarn lint:js
-        - yarn lint:md
-        - yarn test
