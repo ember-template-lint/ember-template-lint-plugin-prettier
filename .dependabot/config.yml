@@ -9,3 +9,8 @@ update_configs:
       - match:
           update_type: "in_range"
     version_requirement_updates: "auto"
+    ignored_updates:
+      - match:
+          dependency_name: "prettier"
+      - match:
+          dependency_name: "ember-template-lint"
