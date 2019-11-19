@@ -19,7 +19,6 @@ before_install:
 script:
   - cat node_modules/ember-template-lint/package.json | grep \"version\"
   - yarn lint:js
-  - yarn lint:md
   - yarn test
 
 env:
