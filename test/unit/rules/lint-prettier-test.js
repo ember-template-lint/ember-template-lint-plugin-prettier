@@ -57,9 +57,9 @@ test
 {{/my-component}}`,
       result: {
         moduleId: "layout.hbs",
-        message: "Replace `⏎⏎test⏎⏎` with `test`",
+        message: "Replace `⏎test⏎` with `  test`",
         line: 1,
-        column: 17,
+        column: 18,
         source: "{{#my-component}}\n\ntest\n\n{{/my-component}}"
       }
     },
