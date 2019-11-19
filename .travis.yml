@@ -18,6 +18,7 @@ before_install:
 
 script:
   - cat node_modules/ember-template-lint/package.json | grep \"version\"
+  - cat node_modules/prettier/package.json | grep \"version\"
   - yarn lint:js
   - yarn test
 
