@@ -19,9 +19,8 @@
   "scripts": {
     "changelog": "lerna-changelog",
     "lint:js": "eslint . --cache",
-    "lint:md": "prettylint ./*.md",
     "test": "mocha --recursive",
-    "format": "yarn prettier '**/*.{hbs,js,json,md,yml}' --write"
+    "format": "yarn prettier '**/*.{hbs,js,json,yml}' --write"
   },
   "repository": "git@github.com:dcyriller/ember-template-lint-plugin-prettier.git",
   "author": "Cyrille David <'cyrille@qonto.eu'>",
@@ -39,8 +38,7 @@
     "eslint-plugin-prettier": "^3.1.0",
     "lerna-changelog": "^0.8.2",
     "mocha": "^6.1.4",
-    "prettier": "^1.18.2",
-    "prettylint": "^1.0.0"
+    "prettier": "^1.18.2"
   },
   "engines": {
     "node": "8.* || >= 10.*"
