@@ -28,21 +28,30 @@ Also, this plugin doesn't come with a recommended set of rules (that you often p
 
 ## Recommended configuration
 
-You can merge your existing `.template-lintrc.js` configuration with this object:
-
+A recommended configuration is available. To use it, merge the following object
+to your `.templatelintrc.js` file:
 ```
 module.exports = {
   plugins: ["ember-template-lint-plugin-prettier"],
 
+  extends: ["recommend", "ember-template-lint-plugin-prettier:recommended"],
+  },
+};
+```
+
+The recommended set will apply the following rules:
+```
+module.exports = {
   rules: {
     prettier: true, // turn this plugin's rule on
 
      // if you use ember-template-lint's recommended set of rules
-     // through `extends: "recommended"`,
-     // these two rules need to be disabled
+     // the following stylistic rules need to be disabled
      // to let Prettier handle formatting
     "block-indentation": false,
-    "self-closing-void-elements": false,
+    "linebreak-style": false,
+    quotes: false,
+    "self-closing-void-elements": false
   },
 };
 ```
