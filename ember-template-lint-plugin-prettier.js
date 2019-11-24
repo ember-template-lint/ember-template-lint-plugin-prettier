@@ -1,4 +1,4 @@
-const PrettierRule = require("./rules/lint-prettier");
+const PrettierRule = require("./lib/rules/prettier");
 
 module.exports = {
   name: "ember-template-lint-plugin-prettier",
