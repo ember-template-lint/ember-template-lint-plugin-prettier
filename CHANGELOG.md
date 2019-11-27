@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## v1.1.0 (2019-11-27)
+
+#### :rocket: Enhancement
+* [#52](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/52) Add a recommended set of rules ([@dcyriller](https://github.com/dcyriller))
+
+#### Committers: 1
+- Cyrille David ([@dcyriller](https://github.com/dcyriller))
+
+
+## v1.1.0-beta.0 (2019-11-24)
+
+#### :house: Internal
+* [#51](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/51) Upgrade prettier devDependency ([@dcyriller](https://github.com/dcyriller))
+* [#50](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/50) Remove markdown linting ([@dcyriller](https://github.com/dcyriller))
+
+#### Committers: 1
+- Cyrille David ([@dcyriller](https://github.com/dcyriller))
+
 ## v1.0.0 (2019-11-04)
 
 #### :memo: Documentation
