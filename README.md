@@ -24,28 +24,21 @@ yarn add -D prettier ember-template-lint-plugin-prettier
 
 As peerDependencies, `prettier` and `ember-template-lint` will have to be installed in your project. Prettier version local to the project will be used (not any global one!).
 
-Also, this plugin doesn't come with a recommended set of rules (that you often provide in the `extends` config key). At least for today! You'll have to enable them manually (see "Recommended configuration").
-
 ## Recommended configuration
 
-You can merge your existing `.template-lintrc.js` configuration with this object:
+A recommended configuration is available. To use it, merge the following object
+to your `.templatelintrc.js` file:
 
 ```
 module.exports = {
   plugins: ["ember-template-lint-plugin-prettier"],
 
-  rules: {
-    prettier: true, // turn this plugin's rule on
-
-     // if you use ember-template-lint's recommended set of rules
-     // through `extends: "recommended"`,
-     // these two rules need to be disabled
-     // to let Prettier handle formatting
-    "block-indentation": false,
-    "self-closing-void-elements": false,
+  extends: ["recommend", "ember-template-lint-plugin-prettier:recommended"],
   },
 };
 ```
+
+The recommended set will apply [these rules](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/blob/v1.1.0-beta.0/lib/config/recommended.js).
 
 ## Warnings
 
