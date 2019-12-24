@@ -27,13 +27,13 @@ As peerDependencies, `prettier` and `ember-template-lint` will have to be instal
 ## Recommended configuration
 
 A recommended configuration is available. To use it, merge the following object
-to your `.templatelintrc.js` file:
+to your `.template-lintrc.js` file:
 
 ```
 module.exports = {
   plugins: ["ember-template-lint-plugin-prettier"],
 
-  extends: ["recommend", "ember-template-lint-plugin-prettier:recommended"],
+  extends: ["recommended", "ember-template-lint-plugin-prettier:recommended"],
   },
 };
 ```
