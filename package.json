@@ -33,7 +33,7 @@
     "ember-template-lint": "^1.6.1",
     "eslint": "^6.0.1",
     "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "lerna-changelog": "^0.8.2",
     "mocha": "^6.1.4",
