@@ -40,7 +40,7 @@
     "prettier": "^1.19.0"
   },
   "engines": {
-    "node": "8.* || >= 10.*"
+    "node": "10.* || >= 12.*"
   },
   "dependencies": {
     "prettier-linter-helpers": "^1.0.0"
