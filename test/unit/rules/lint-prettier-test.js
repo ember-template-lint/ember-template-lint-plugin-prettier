@@ -30,7 +30,7 @@ test
       config: true,
       template: "{{#my-component}}{{/my-component}}\n",
       result: {
-        moduleId: "layout.hbs",
+        moduleId: "layout",
         message: "Delete `⏎`",
         line: 1,
         column: 34,
@@ -41,7 +41,7 @@ test
       config: true,
       template: "test\n",
       result: {
-        moduleId: "layout.hbs",
+        moduleId: "layout",
         message: "Delete `⏎`",
         line: 1,
         column: 4,
@@ -56,7 +56,7 @@ test
 
 {{/my-component}}`,
       result: {
-        moduleId: "layout.hbs",
+        moduleId: "layout",
         message: "Replace `⏎test⏎` with `  test`",
         line: 1,
         column: 18,
@@ -70,7 +70,7 @@ test
 
 {{/my-component}}`,
       result: {
-        moduleId: "layout.hbs",
+        moduleId: "layout",
         message: "Delete `⏎`",
         line: 2,
         column: 7,
