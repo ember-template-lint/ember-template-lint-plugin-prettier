@@ -526,10 +526,9 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-ember-template-lint@^2.1.0:
+"ember-template-lint@github:ember-template-lint/ember-template-lint":
   version "2.1.0"
-  resolved "https://registry.yarnpkg.com/ember-template-lint/-/ember-template-lint-2.1.0.tgz#b3d94c469884843bc7ba822df49e306eefd0a8e3"
-  integrity sha512-zljFYC1Vi0pMP0ijZ6cf55vJPLVgM7A7Uw5osfwDOckCLIbz2N2NnPuSU43h540VFt5ZE64R8DCu003wbN012w==
+  resolved "https://codeload.github.com/ember-template-lint/ember-template-lint/tar.gz/83308c1c81737ff4067ea4a2baa6c7d68a1efb8e"
   dependencies:
     chalk "^3.0.0"
     ember-template-recast "^4.1.1"
@@ -539,7 +538,7 @@ ember-template-lint@^2.1.0:
     resolve "^1.15.1"
     strip-bom "^4.0.0"
 
-ember-template-recast@^4.1.1:
+ember-template-recast@^4.0.0, ember-template-recast@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/ember-template-recast/-/ember-template-recast-4.1.1.tgz#25dca7a460a3c9a4777945efd56ecdfbc2c40739"
   integrity sha512-NbSlDestTX3GdGgcC1ohgmvJyhTrOQdDrs7XD3s6Lmr71LVfm9lhFovC8YbAII29+FA0S6GKNXs6POQ/soUDkA==
