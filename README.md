@@ -48,7 +48,7 @@ Handlebars support is still experimental in Prettier! So, between Prettier upgra
 
 #### Special warning: bare strings in templates (ie. )
 
-Are you're using bare strings in your templates? If you're unsure, you can lint your templates against [this rule](https://github.com/ember-template-lint/ember-template-lint/blob/master/docs/rule/no-bare-strings.md).
+Are you using bare strings in your templates? If you're unsure, you can lint your templates against [this rule](https://github.com/ember-template-lint/ember-template-lint/blob/master/docs/rule/no-bare-strings.md).
 
 If you do so, you implicitly rely on your templates whitespaces. As such, you most probably want to wait before using this package. Indeed, whitespaces / newlines handling is still not 100% settled in Prettier.
 
