@@ -34,7 +34,8 @@ test
         message: "Delete `⏎`",
         line: 1,
         column: 34,
-        source: "{{#my-component}}{{/my-component}}\n"
+        source: "{{#my-component}}{{/my-component}}\n",
+        isFixable: true
       }
     },
     {
@@ -45,7 +46,8 @@ test
         message: "Delete `⏎`",
         line: 1,
         column: 4,
-        source: "test\n"
+        source: "test\n",
+        isFixable: true
       }
     },
     {
@@ -60,7 +62,8 @@ test
         message: "Replace `⏎test⏎` with `  test`",
         line: 1,
         column: 18,
-        source: "{{#my-component}}\n\ntest\n\n{{/my-component}}"
+        source: "{{#my-component}}\n\ntest\n\n{{/my-component}}",
+        isFixable: true
       }
     },
     {
@@ -75,7 +78,8 @@ test
         line: 2,
         column: 7,
         source:
-          '{{#my-component class="class1 class2"}}\n  test\n\n{{/my-component}}'
+          '{{#my-component class="class1 class2"}}\n  test\n\n{{/my-component}}',
+        isFixable: true
       }
     }
   ]
