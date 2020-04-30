@@ -17,6 +17,8 @@
   "main": "ember-template-lint-plugin-prettier.js",
   "scripts": {
     "changelog": "lerna-changelog",
+    "lint": "npm-run-all lint:* --continue-on-error",
+    "lint:docs": "markdownlint 'docs/**/*.md'",
     "lint:js": "eslint . --cache",
     "test": "mocha --recursive",
     "format": "yarn prettier '**/*.{hbs,js,json,yml}' --write"
@@ -36,7 +38,9 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "lerna-changelog": "^1.0.0",
+    "markdownlint-cli": "^0.22.0",
     "mocha": "^7.0.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.19.0"
   },
   "engines": {
@@ -44,5 +48,9 @@
   },
   "dependencies": {
     "prettier-linter-helpers": "^1.0.0"
+  },
+  "volta": {
+    "node": "12.16.3",
+    "yarn": "1.22.4"
   }
 }
