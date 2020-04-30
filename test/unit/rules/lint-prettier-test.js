@@ -29,6 +29,7 @@ test
     {
       config: true,
       template: "{{#my-component}}{{/my-component}}\n",
+      fixedTemplate: "{{#my-component}}{{/my-component}}",
       result: {
         moduleId: "layout",
         message: "Delete `⏎`",
@@ -41,6 +42,7 @@ test
     {
       config: true,
       template: "test\n",
+      fixedTemplate: "test",
       result: {
         moduleId: "layout",
         message: "Delete `⏎`",
@@ -57,6 +59,9 @@ test
 test
 
 {{/my-component}}`,
+      fixedTemplate: `{{#my-component}}
+  test
+{{/my-component}}`,
       result: {
         moduleId: "layout",
         message: "Replace `⏎test⏎` with `  test`",
@@ -71,6 +76,9 @@ test
       template: `{{#my-component class="class1 class2"}}
   test
 
+{{/my-component}}`,
+      fixedTemplate: `{{#my-component class="class1 class2"}}
+  test
 {{/my-component}}`,
       result: {
         moduleId: "layout",
