@@ -41,6 +41,28 @@ test
     },
     {
       config: true,
+      template: `<div data-foo
+ data-bar="lol"
+      some-other-thing={{haha-morethaneightychars}}>
+</div>`,
+      fixedTemplate: `<div data-foo
+ data-bar="lol"
+  some-other-thing={{haha-morethaneightychars}}>
+</div>`,
+      result: {
+        moduleId: "layout",
+        message: 'Replace `⏎·data-bar="lol"⏎·····` with ` data-bar="lol"`',
+        line: 1,
+        column: 13,
+        source: `<div data-foo
+ data-bar="lol"
+      some-other-thing={{haha-morethaneightychars}}>
+</div>`,
+        isFixable: true
+      }
+    },
+    {
+      config: true,
       template: "test\n",
       fixedTemplate: "test",
       result: {
