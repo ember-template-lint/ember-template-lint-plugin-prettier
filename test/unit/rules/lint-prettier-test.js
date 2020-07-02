@@ -4,7 +4,7 @@ const plugin = require("../../../ember-template-lint-plugin-prettier");
 generateRuleTests({
   name: "prettier",
 
-  groupMethodBefore: beforeEach,
+  groupMethodBefore: before,
   groupingMethod: describe,
   testMethod: it,
   plugins: [plugin],
