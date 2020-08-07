@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## v2.0.0 (2020-08-07)
+
+#### :boom: Breaking Change
+* [#99](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/99) Drop NodeJs 13 support ([@dcyriller](https://github.com/dcyriller))
+* [#70](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/70) Drop support for ember-template-lint@1 ([@dcyriller](https://github.com/dcyriller))
+* [#69](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/69) Drop support for NodeJs 8 & 11 ([@dcyriller](https://github.com/dcyriller))
+
+#### :rocket: Enhancement
+* [#78](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/78) Fix templates with Prettier ([@dcyriller](https://github.com/dcyriller))
+
+#### :house: Internal
+* [#81](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/81) Update CI config ([@dcyriller](https://github.com/dcyriller))
+* [#69](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/69) Drop support for NodeJs 8 & 11 ([@dcyriller](https://github.com/dcyriller))
+
+#### Committers: 5
+- Cyrille David ([@dcyriller](https://github.com/dcyriller))
+- Dan Wenzel ([@danwenzel](https://github.com/danwenzel))
+- James C. Davis ([@jamescdavis](https://github.com/jamescdavis))
+- Paul Watts ([@paulcwatts](https://github.com/paulcwatts))
+
 ## v1.1.0 (2019-11-27)
 
 #### :rocket: Enhancement
@@ -7,7 +27,6 @@
 
 #### Committers: 1
 - Cyrille David ([@dcyriller](https://github.com/dcyriller))
-
 
 ## v1.1.0-beta.0 (2019-11-24)
 
