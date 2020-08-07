@@ -44,7 +44,7 @@
     "prettier": "^1.19.0"
   },
   "engines": {
-    "node": "10.* || >= 12.*"
+    "node": "10.* || 12.* || >= 14.*"
   },
   "dependencies": {
     "prettier-linter-helpers": "^1.0.0"
