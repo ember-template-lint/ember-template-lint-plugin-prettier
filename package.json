@@ -28,11 +28,11 @@
   "license": "Apache-2.0",
   "private": false,
   "peerDependencies": {
-    "ember-template-lint": "^2.1.0",
+    "ember-template-lint": "^2.10.0",
     "prettier": "^1.18.2"
   },
   "devDependencies": {
-    "ember-template-lint": "^2.1.0",
+    "ember-template-lint": "^2.10.0",
     "eslint": "^7.1.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-node": "^11.0.0",

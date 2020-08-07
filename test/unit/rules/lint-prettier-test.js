@@ -29,23 +29,47 @@ test
     {
       config: true,
       template: "{{#my-component}}{{/my-component}}\n",
+      fixedTemplate: "{{#my-component}}{{/my-component}}",
       result: {
         moduleId: "layout",
         message: "Delete `⏎`",
         line: 1,
         column: 34,
-        source: "{{#my-component}}{{/my-component}}\n"
+        source: "{{#my-component}}{{/my-component}}\n",
+        isFixable: true
+      }
+    },
+    {
+      config: true,
+      template: `<div data-foo
+ data-bar="lol"
+      some-other-thing={{haha-morethaneightychars}}>
+</div>`,
+      fixedTemplate: `<div data-foo data-bar="lol" some-other-thing={{haha-morethaneightychars}}>
+</div>`,
+      result: {
+        moduleId: "layout",
+        message: 'Replace `⏎·data-bar="lol"⏎·····` with ` data-bar="lol"`',
+        line: 1,
+        column: 13,
+        source: `<div data-foo
+ data-bar="lol"
+      some-other-thing={{haha-morethaneightychars}}>
+</div>`,
+        isFixable: true
       }
     },
     {
       config: true,
       template: "test\n",
+      fixedTemplate: "test",
       result: {
         moduleId: "layout",
         message: "Delete `⏎`",
         line: 1,
         column: 4,
-        source: "test\n"
+        source: "test\n",
+        isFixable: true
       }
     },
     {
@@ -55,12 +79,16 @@ test
 test
 
 {{/my-component}}`,
+      fixedTemplate: `{{#my-component}}
+  test
+{{/my-component}}`,
       result: {
         moduleId: "layout",
         message: "Replace `⏎test⏎` with `  test`",
         line: 1,
         column: 18,
-        source: "{{#my-component}}\n\ntest\n\n{{/my-component}}"
+        source: "{{#my-component}}\n\ntest\n\n{{/my-component}}",
+        isFixable: true
       }
     },
     {
@@ -69,13 +97,17 @@ test
   test
 
 {{/my-component}}`,
+      fixedTemplate: `{{#my-component class="class1 class2"}}
+  test
+{{/my-component}}`,
       result: {
         moduleId: "layout",
         message: "Delete `⏎`",
         line: 2,
         column: 7,
         source:
-          '{{#my-component class="class1 class2"}}\n  test\n\n{{/my-component}}'
+          '{{#my-component class="class1 class2"}}\n  test\n\n{{/my-component}}',
+        isFixable: true
       }
     }
   ]
