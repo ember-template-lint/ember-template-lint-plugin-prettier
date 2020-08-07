@@ -28,18 +28,18 @@
   "license": "Apache-2.0",
   "private": false,
   "peerDependencies": {
-    "ember-template-lint": "^2.5.2",
+    "ember-template-lint": "^2.10.0",
     "prettier": "^1.18.2"
   },
   "devDependencies": {
-    "ember-template-lint": "^2.5.2",
-    "eslint": "^6.0.1",
+    "ember-template-lint": "^2.10.0",
+    "eslint": "^7.1.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "lerna-changelog": "^1.0.0",
-    "markdownlint-cli": "^0.22.0",
-    "mocha": "^7.0.1",
+    "markdownlint-cli": "^0.23.1",
+    "mocha": "^8.1.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.19.0"
   },
