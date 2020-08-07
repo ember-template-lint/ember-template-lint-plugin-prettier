@@ -45,9 +45,7 @@ test
  data-bar="lol"
       some-other-thing={{haha-morethaneightychars}}>
 </div>`,
-      fixedTemplate: `<div data-foo
- data-bar="lol"
-  some-other-thing={{haha-morethaneightychars}}>
+      fixedTemplate: `<div data-foo data-bar="lol" some-other-thing={{haha-morethaneightychars}}>
 </div>`,
       result: {
         moduleId: "layout",
