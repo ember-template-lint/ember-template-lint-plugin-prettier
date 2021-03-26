@@ -31,7 +31,6 @@ test
       template: "{{#my-component}}{{/my-component}}\n",
       fixedTemplate: "{{#my-component}}{{/my-component}}",
       result: {
-        moduleId: "layout",
         message: "Delete `⏎`",
         line: 1,
         column: 34,
@@ -48,7 +47,6 @@ test
       fixedTemplate: `<div data-foo data-bar="lol" some-other-thing={{haha-morethaneightychars}}>
 </div>`,
       result: {
-        moduleId: "layout",
         message: 'Replace `⏎·data-bar="lol"⏎·····` with ` data-bar="lol"`',
         line: 1,
         column: 13,
@@ -64,7 +62,6 @@ test
       template: "test\n",
       fixedTemplate: "test",
       result: {
-        moduleId: "layout",
         message: "Delete `⏎`",
         line: 1,
         column: 4,
@@ -83,7 +80,6 @@ test
   test
 {{/my-component}}`,
       result: {
-        moduleId: "layout",
         message: "Replace `⏎test⏎` with `  test`",
         line: 1,
         column: 18,
@@ -101,7 +97,6 @@ test
   test
 {{/my-component}}`,
       result: {
-        moduleId: "layout",
         message: "Delete `⏎`",
         line: 2,
         column: 7,
