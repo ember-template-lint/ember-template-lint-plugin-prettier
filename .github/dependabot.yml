@@ -1,0 +1,29 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: monthly
+    time: "04:00"
+    timezone: EST
+  open-pull-requests-limit: 10
+  labels:
+  - dependencies
+  ignore:
+  - dependency-name: ember-template-lint
+    versions:
+    - ">= 0"
+  - dependency-name: prettier
+    versions:
+    - ">= 0"
+  - dependency-name: eslint
+    versions:
+    - 7.17.0
+    - 7.19.0
+  - dependency-name: eslint-config-prettier
+    versions:
+    - 7.1.0
+    - 7.2.0
+  - dependency-name: mocha
+    versions:
+    - 8.2.1
