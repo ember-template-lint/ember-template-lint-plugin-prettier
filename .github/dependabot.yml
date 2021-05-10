@@ -16,3 +16,10 @@ updates:
   - dependency-name: prettier
     versions:
     - ">= 0"
+- package-ecosystem: github-actions
+  directory: "/"
+  schedule:
+    interval: monthly
+    time: "04:00"
+    timezone: EST
+  open-pull-requests-limit: 10
