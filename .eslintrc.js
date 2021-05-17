@@ -3,22 +3,22 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:node/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
   ],
   plugins: ["prettier"],
   env: {
-    node: true
+    node: true,
   },
   rules: {
-    "prettier/prettier": ["error"]
+    "prettier/prettier": ["error"],
   },
 
   overrides: [
     {
       files: ["test/**/*-test.js", "test/helpers/rule-test-harness.js"],
       env: {
-        mocha: true
-      }
-    }
-  ]
+        mocha: true,
+      },
+    },
+  ],
 };

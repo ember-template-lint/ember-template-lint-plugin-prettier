@@ -5,11 +5,11 @@ module.exports = {
 
   configurations: {
     recommended: {
-      rules: require("./lib/config/recommended")
-    }
+      rules: require("./lib/config/recommended"),
+    },
   },
 
   rules: {
-    prettier: PrettierRule
-  }
+    prettier: PrettierRule,
+  },
 };
