@@ -28,8 +28,8 @@
   "license": "Apache-2.0",
   "private": false,
   "peerDependencies": {
-    "ember-template-lint": "^2.10.0",
-    "prettier": "^1.18.2"
+    "ember-template-lint": ">=2.10.0",
+    "prettier": ">=1.18.1"
   },
   "devDependencies": {
     "ember-template-lint": "^2.10.0",
