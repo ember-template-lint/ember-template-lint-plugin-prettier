@@ -1,25 +1,25 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: monthly
-    time: "04:00"
-    timezone: EST
-  open-pull-requests-limit: 10
-  labels:
-  - dependencies
-  ignore:
-  - dependency-name: ember-template-lint
-    versions:
-    - ">= 0"
-  - dependency-name: prettier
-    versions:
-    - ">= 0"
-- package-ecosystem: github-actions
-  directory: "/"
-  schedule:
-    interval: monthly
-    time: "04:00"
-    timezone: EST
-  open-pull-requests-limit: 10
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: monthly
+      time: "04:00"
+      timezone: EST
+    open-pull-requests-limit: 10
+    labels:
+      - dependencies
+    ignore:
+      - dependency-name: ember-template-lint
+        versions:
+          - ">= 0"
+      - dependency-name: prettier
+        versions:
+          - ">= 0"
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
+      time: "04:00"
+      timezone: EST
+    open-pull-requests-limit: 10
