@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## v2.0.1 (2021-06-02)
+
+#### :bug: Bug Fix
+* [#150](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/150) Update peerDependencies ([@dmytro-krekota](https://github.com/dmytro-krekota))
+
+#### :memo: Documentation
+* [#119](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/119) Fix typo in code example ([@HeroicEric](https://github.com/HeroicEric))
+
+#### Committers: 3
+- Dmytro Krekota ([@dmytro-krekota](https://github.com/dmytro-krekota))
+- Eric Kelly ([@HeroicEric](https://github.com/HeroicEric))
+- [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
+
 ## v2.0.0 (2020-08-07)
 
 #### :boom: Breaking Change
