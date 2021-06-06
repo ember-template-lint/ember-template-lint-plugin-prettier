@@ -77,12 +77,14 @@ test
 
 {{/my-component}}`,
       fixedTemplate: `{{#my-component}}
+
   test
+
 {{/my-component}}`,
       result: {
-        message: "Replace `⏎test⏎` with `  test`",
-        line: 1,
-        column: 18,
+        message: "Insert `··`",
+        line: 2,
+        column: 1,
         source: "{{#my-component}}\n\ntest\n\n{{/my-component}}",
         isFixable: true,
       },
@@ -90,18 +92,19 @@ test
     {
       config: true,
       template: `{{#my-component class="class1 class2"}}
-  test
+  test 
 
 {{/my-component}}`,
       fixedTemplate: `{{#my-component class="class1 class2"}}
   test
+
 {{/my-component}}`,
       result: {
-        message: "Delete `⏎`",
+        message: "Delete `·`",
         line: 2,
-        column: 7,
+        column: 6,
         source:
-          '{{#my-component class="class1 class2"}}\n  test\n\n{{/my-component}}',
+          '{{#my-component class="class1 class2"}}\n  test \n\n{{/my-component}}',
         isFixable: true,
       },
     },
