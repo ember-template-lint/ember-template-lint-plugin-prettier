@@ -22,7 +22,7 @@ test
 
 test
 
-{{/my-component}}`
+{{/my-component}}`,
   ],
 
   bad: [
@@ -31,13 +31,12 @@ test
       template: "{{#my-component}}{{/my-component}}\n",
       fixedTemplate: "{{#my-component}}{{/my-component}}",
       result: {
-        moduleId: "layout",
         message: "Delete `⏎`",
         line: 1,
         column: 34,
         source: "{{#my-component}}{{/my-component}}\n",
-        isFixable: true
-      }
+        isFixable: true,
+      },
     },
     {
       config: true,
@@ -48,7 +47,6 @@ test
       fixedTemplate: `<div data-foo data-bar="lol" some-other-thing={{haha-morethaneightychars}}>
 </div>`,
       result: {
-        moduleId: "layout",
         message: 'Replace `⏎·data-bar="lol"⏎·····` with ` data-bar="lol"`',
         line: 1,
         column: 13,
@@ -56,21 +54,20 @@ test
  data-bar="lol"
       some-other-thing={{haha-morethaneightychars}}>
 </div>`,
-        isFixable: true
-      }
+        isFixable: true,
+      },
     },
     {
       config: true,
       template: "test\n",
       fixedTemplate: "test",
       result: {
-        moduleId: "layout",
         message: "Delete `⏎`",
         line: 1,
         column: 4,
         source: "test\n",
-        isFixable: true
-      }
+        isFixable: true,
+      },
     },
     {
       config: true,
@@ -80,35 +77,36 @@ test
 
 {{/my-component}}`,
       fixedTemplate: `{{#my-component}}
+
   test
+
 {{/my-component}}`,
       result: {
-        moduleId: "layout",
-        message: "Replace `⏎test⏎` with `  test`",
-        line: 1,
-        column: 18,
+        message: "Insert `··`",
+        line: 2,
+        column: 1,
         source: "{{#my-component}}\n\ntest\n\n{{/my-component}}",
-        isFixable: true
-      }
+        isFixable: true,
+      },
     },
     {
       config: true,
       template: `{{#my-component class="class1 class2"}}
-  test
+  test 
 
 {{/my-component}}`,
       fixedTemplate: `{{#my-component class="class1 class2"}}
   test
+
 {{/my-component}}`,
       result: {
-        moduleId: "layout",
-        message: "Delete `⏎`",
+        message: "Delete `·`",
         line: 2,
-        column: 7,
+        column: 6,
         source:
-          '{{#my-component class="class1 class2"}}\n  test\n\n{{/my-component}}',
-        isFixable: true
-      }
-    }
-  ]
+          '{{#my-component class="class1 class2"}}\n  test \n\n{{/my-component}}',
+        isFixable: true,
+      },
+    },
+  ],
 });
