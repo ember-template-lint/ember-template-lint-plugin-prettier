@@ -1,8 +1,6 @@
-# ember-template-lint-plugin-prettier 👋
+# ember-template-lint-plugin-prettier
 
 It uses [Prettier](https://github.com/prettier/prettier) to lint your handlebars templates with [ember-template-lint](https://github.com/ember-template-lint/ember-template-lint). The plugin defines a - single - rule. That rule will compare your code with Prettier's output.
-
-⚠️ Prettier support for handlebars is still experimental ⚠️
 
 Here is an output example:
 
