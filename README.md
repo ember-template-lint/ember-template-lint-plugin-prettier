@@ -37,18 +37,6 @@ module.exports = {
 
 The recommended set will apply [these rules](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/blob/v1.1.0-beta.0/lib/config/recommended.js).
 
-## Warnings
-
-#### General
-
-Handlebars support is still experimental in Prettier! So, between Prettier upgrades, you'll probably find out that your code is formatted in a slightly different way. Also, a few bug fixes are in progress. You can follow the work in progress [here](https://github.com/jgwhite/prettier/issues/1).
-
-#### Special warning: bare strings in templates
-
-Are you using bare strings in your templates? If you're unsure, you can lint your templates against [this rule](https://github.com/ember-template-lint/ember-template-lint/blob/master/docs/rule/no-bare-strings.md).
-
-If you do so, you implicitly rely on your templates whitespaces. As such, you most probably want to wait before using this package. Indeed, whitespaces / newlines handling is still not 100% settled in Prettier.
-
 ## Tips
 
 You may want to define these two scripts in your package.json:
@@ -57,18 +45,12 @@ You may want to define these two scripts in your package.json:
 {
   "scripts": {
     "lint:hbs": "ember-template-lint .",
-    "format:hbs": "prettier **/*.hbs --write --parser=glimmer"
+    "format:hbs": "prettier **/*.hbs --write"
   }
 }
 ```
 
 `yarn lint:hbs` is useful in CI. `yarn format:hbs` will let you format your templates if your editor does not have this feature yet.
-
-## Examples
-
-[Here is an early example](https://github.com/dcyriller/client/pull/1) of usage in [emberobserver](https://emberobserver.com/) source code. As you can see, it's illustrating the whitespaces / newlines issue with bare strings.
-
-[Here is another early example](https://github.com/dcyriller/ember-osf-web/pull/1) of usage in [ember-osf-web](https://github.com/CenterForOpenScience/ember-osf-web).
 
 ## Credits
 
