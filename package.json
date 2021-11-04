@@ -44,13 +44,13 @@
     "prettier": "^2.3.1"
   },
   "engines": {
-    "node": "10.* || 12.* || >= 14.*"
+    "node": "12.* || 14.* || >= 16.*"
   },
   "dependencies": {
     "prettier-linter-helpers": "^1.0.0"
   },
   "volta": {
-    "node": "12.16.3",
-    "yarn": "1.22.4"
+    "node": "12.22.7",
+    "yarn": "1.22.17"
   }
 }
