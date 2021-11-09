@@ -35,7 +35,7 @@ test
         line: 1,
         column: 34,
         endLine: 1,
-        endColumn: 34,
+        endColumn: 35,
         source: "{{#my-component}}{{/my-component}}\n",
         isFixable: true,
       },
@@ -52,8 +52,8 @@ test
         message: 'Replace `⏎·data-bar="lol"⏎·····` with ` data-bar="lol"`',
         line: 1,
         column: 13,
-        endLine: 1,
-        endColumn: 13,
+        endLine: 3,
+        endColumn: 5,
         source: `<div data-foo
  data-bar="lol"
       some-other-thing={{haha-morethaneightychars}}>
@@ -70,7 +70,7 @@ test
         line: 1,
         column: 4,
         endLine: 1,
-        endColumn: 4,
+        endColumn: 5,
         source: "test\n",
         isFixable: true,
       },
@@ -112,7 +112,7 @@ test
         line: 2,
         column: 6,
         endLine: 2,
-        endColumn: 6,
+        endColumn: 7,
         source:
           '{{#my-component class="class1 class2"}}\n  test \n\n{{/my-component}}',
         isFixable: true,
