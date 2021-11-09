@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## v3.0.0 (2021-11-09)
+
+#### :boom: Breaking Change
+* [#176](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/176) Drop support for Node 10 and 15 ([@dcyriller](https://github.com/dcyriller))
+
+#### :rocket: Enhancement
+* [#178](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/178) Ensuring we pass node and/or line, column, endLine, endColumn to log ([@scalvert](https://github.com/scalvert))
+
+#### Committers: 3
+- Cyrille ([@dcyriller](https://github.com/dcyriller))
+- Dmytro Krekota ([@dmytro-krekota](https://github.com/dmytro-krekota))
+- Steve Calvert ([@scalvert](https://github.com/scalvert))
+
 ## v2.0.1 (2021-06-02)
 
 #### :bug: Bug Fix
