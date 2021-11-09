@@ -20,11 +20,12 @@
     "docs"
   ],
   "scripts": {
+    "format": "yarn prettier '**/*.{hbs,js,json,yml}' --write",
     "lint": "npm-run-all lint:* --continue-on-error",
     "lint:docs": "markdownlint 'docs/**/*.md'",
     "lint:js": "eslint . --cache",
-    "test": "mocha --recursive",
-    "format": "yarn prettier '**/*.{hbs,js,json,yml}' --write"
+    "release": "release-it",
+    "test": "mocha --recursive"
   },
   "dependencies": {
     "prettier-linter-helpers": "^1.0.0"
