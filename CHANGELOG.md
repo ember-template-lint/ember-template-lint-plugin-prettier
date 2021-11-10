@@ -1,5 +1,14 @@
 # CHANGELOG
 
+
+## v3.0.1 (2021-11-10)
+
+#### :house: Internal
+* [#179](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/179) Setup release-it with `yarn create rwjblue-release-it-setup` ([@dcyriller](https://github.com/dcyriller))
+
+#### Committers: 1
+- Cyrille ([@dcyriller](https://github.com/dcyriller))
+
 ## v3.0.0 (2021-11-09)
 
 #### :boom: Breaking Change
