@@ -1,6 +1,7 @@
 {
   "name": "ember-template-lint-plugin-prettier",
   "version": "3.0.0",
+  "private": false,
   "description": "A prettier plugin for ember-template-lint",
   "keywords": [
     "ember-template-lint",
@@ -9,27 +10,25 @@
     "glimmer",
     "prettier"
   ],
+  "repository": "git@github.com:ember-template-lint/ember-template-lint-plugin-prettier.git",
+  "license": "Apache-2.0",
+  "author": "Cyrille David <'cyrille@qonto.eu'>",
+  "main": "ember-template-lint-plugin-prettier.js",
   "files": [
     "ember-template-lint-plugin-prettier.js",
     "lib",
     "docs"
   ],
-  "main": "ember-template-lint-plugin-prettier.js",
   "scripts": {
-    "changelog": "lerna-changelog",
+    "format": "yarn prettier '**/*.{hbs,js,json,yml}' --write",
     "lint": "npm-run-all lint:* --continue-on-error",
     "lint:docs": "markdownlint 'docs/**/*.md'",
     "lint:js": "eslint . --cache",
-    "test": "mocha --recursive",
-    "format": "yarn prettier '**/*.{hbs,js,json,yml}' --write"
+    "release": "release-it",
+    "test": "mocha --recursive"
   },
-  "repository": "git@github.com:dcyriller/ember-template-lint-plugin-prettier.git",
-  "author": "Cyrille David <'cyrille@qonto.eu'>",
-  "license": "Apache-2.0",
-  "private": false,
-  "peerDependencies": {
-    "ember-template-lint": ">=2.10.0",
-    "prettier": ">=1.18.1"
+  "dependencies": {
+    "prettier-linter-helpers": "^1.0.0"
   },
   "devDependencies": {
     "ember-template-lint": "^3.4.2",
@@ -41,13 +40,34 @@
     "markdownlint-cli": "^0.29.0",
     "mocha": "^9.0.1",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.3.1"
+    "prettier": "^2.3.1",
+    "release-it": "^14.11.6",
+    "release-it-lerna-changelog": "^4.0.1"
+  },
+  "peerDependencies": {
+    "ember-template-lint": ">=2.10.0",
+    "prettier": ">=1.18.1"
   },
   "engines": {
     "node": "12.* || 14.* || >= 16.*"
   },
-  "dependencies": {
-    "prettier-linter-helpers": "^1.0.0"
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "release-it": {
+    "plugins": {
+      "release-it-lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": false
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    }
   },
   "volta": {
     "node": "12.22.7",
