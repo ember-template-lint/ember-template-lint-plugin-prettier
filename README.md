@@ -58,4 +58,4 @@ This plugin has been inspired by [the prettier plugin](https://github.com/pretti
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/blob/master/CONTRIBUTING.md)
+See [CONTRIBUTING.md](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/blob/main/CONTRIBUTING.md)
