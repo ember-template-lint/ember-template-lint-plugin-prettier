@@ -10,7 +10,7 @@
     "glimmer",
     "prettier"
   ],
-  "repository": "git@github.com:dcyriller/ember-template-lint-plugin-prettier.git",
+  "repository": "git@github.com:ember-template-lint/ember-template-lint-plugin-prettier.git",
   "license": "Apache-2.0",
   "author": "Cyrille David <'cyrille@qonto.eu'>",
   "main": "ember-template-lint-plugin-prettier.js",
