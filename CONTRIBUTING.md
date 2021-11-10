@@ -4,7 +4,7 @@ Thanks for contributing!
 
 ## Installation
 
-- `git clone git@github.com:dcyriller/ember-template-lint-plugin-prettier.git`
+- `git clone git@github.com:ember-template-lint/ember-template-lint-plugin-prettier.git`
 - `cd ember-template-lint-plugin-prettier`
 - `yarn install`
 
