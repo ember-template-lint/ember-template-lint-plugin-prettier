@@ -1,6 +1,6 @@
 /* eslint node/no-deprecated-api: 'off' */
-const assert = require("assert");
-const getLocFromIndex = require("../../../lib/utils/get-loc-from-index");
+import assert from "node:assert";
+import getLocFromIndex from "../../../lib/utils/get-loc-from-index.js";
 
 describe("getLocFromIndex()", function () {
   describe("when end-of-file === newline", function () {
