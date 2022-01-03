@@ -1,11 +1,12 @@
-const PrettierRule = require("./lib/rules/prettier");
+import PrettierRule from "./lib/rules/prettier.js";
+import recommended from "./lib/config/recommended.js";
 
-module.exports = {
+export default {
   name: "ember-template-lint-plugin-prettier",
 
   configurations: {
     recommended: {
-      rules: require("./lib/config/recommended"),
+      rules: recommended,
     },
   },
 

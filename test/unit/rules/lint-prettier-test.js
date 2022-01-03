@@ -1,5 +1,5 @@
-const { generateRuleTests } = require("ember-template-lint");
-const plugin = require("../../../ember-template-lint-plugin-prettier");
+import { generateRuleTests } from "ember-template-lint";
+import plugin from "../../../ember-template-lint-plugin-prettier.js";
 
 generateRuleTests({
   name: "prettier",
