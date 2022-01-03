@@ -1,4 +1,4 @@
-const generateRuleTests = require("ember-template-lint/lib/helpers/rule-test-harness");
+const { generateRuleTests } = require("ember-template-lint");
 const plugin = require("../../../ember-template-lint-plugin-prettier");
 
 generateRuleTests({
