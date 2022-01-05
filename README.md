@@ -17,8 +17,11 @@ error: Replace `New·Addons</h1>` with <h1>⏎New Addons⏎</h1>` (prettier/pret
 ## Compatibility
 
 - [Node.js](https://nodejs.org/) `^12.22.0 || ^14.17.0 || >=16.0.0`
-- [ember-template-lint](https://github.com/ember-template-lint/ember-template-lint/) `^4.0.0-beta.3`
+- [ember-template-lint](https://github.com/ember-template-lint/ember-template-lint/) `^4.0.0`
 - [prettier](https://prettier.io/) `>=1.18.1`
+
+Note: ember-template-lint-plugin-prettier@3 is compatible with older versions of
+ember-template-lint, in particular ember-template-lint@3.
 
 ## Install
 
