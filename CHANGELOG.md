@@ -1,6 +1,19 @@
 # CHANGELOG
 
 
+
+## v4.0.0 (2022-01-06)
+
+#### :boom: Breaking Change
+* [#196](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/196) Require ember-template-lint v4 ([@dcyriller](https://github.com/dcyriller))
+* [#191](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/191) Convert to ESM for ember-template-lint v4 ([@bmish](https://github.com/bmish))
+* [#185](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/185) Update recommended config ([@dcyriller](https://github.com/dcyriller))
+
+#### Committers: 3
+- Bryan Mishkin ([@bmish](https://github.com/bmish))
+- Cyrille ([@dcyriller](https://github.com/dcyriller))
+- Steve Calvert ([@scalvert](https://github.com/scalvert))
+
 ## v3.0.1 (2021-11-10)
 
 #### :house: Internal
