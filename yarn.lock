@@ -275,6 +275,19 @@
   dependencies:
     "@octokit/openapi-types" "^11.2.0"
 
+"@release-it-plugins/lerna-changelog@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@release-it-plugins/lerna-changelog/-/lerna-changelog-5.0.0.tgz#cbbbc47fd40ef212f2d7c0e24867d3fcea4cd232"
+  integrity sha512-nMhAUptKSfIsiY0c//HuBcd2VT7D/IoxAQNwRgPx+jf3FM7HA5KD4KSl3oLoz4uA4GjvypWQP4ODX8UbWjmUZA==
+  dependencies:
+    execa "^5.1.1"
+    lerna-changelog "^2.2.0"
+    lodash.template "^4.5.0"
+    mdast-util-from-markdown "^1.2.0"
+    tmp "^0.2.1"
+    validate-peer-dependencies "^2.0.0"
+    which "^2.0.2"
+
 "@simple-dom/interface@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@simple-dom/interface/-/interface-1.4.0.tgz#e8feea579232017f89b0138e2726facda6fbb71f"
@@ -3947,19 +3960,6 @@ registry-url@^5.0.0:
   integrity sha512-8acYXXTI0AkQv6RAOjE3vOaIXZkT9wo4LOFbBKYQEEnnMNBpKqdUrI6S4NT0KPIo/WVvJ5tE/X5LF/TQUf0ekw==
   dependencies:
     rc "^1.2.8"
-
-release-it-lerna-changelog@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/release-it-lerna-changelog/-/release-it-lerna-changelog-5.0.0.tgz#2df62efc4c7435959201e7d4b50e72db4c111d0e"
-  integrity sha512-s/rHzwAwp878bivWKsJKNya9SRVKYZjgpyyGzg5ddBKZY5u5lhTWhxHtld7mHTRg4azIN7YypPH3rGaOfVmNVw==
-  dependencies:
-    execa "^5.1.1"
-    lerna-changelog "^2.2.0"
-    lodash.template "^4.5.0"
-    mdast-util-from-markdown "^1.2.0"
-    tmp "^0.2.1"
-    validate-peer-dependencies "^2.0.0"
-    which "^2.0.2"
 
 release-it@^14.11.6:
   version "14.12.5"
