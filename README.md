@@ -36,7 +36,7 @@ As peerDependencies, `prettier` and `ember-template-lint` will have to be instal
 A recommended configuration is available. To use it, merge the following object
 to your `.template-lintrc.js` file:
 
-```
+```js
 module.exports = {
   plugins: ["ember-template-lint-plugin-prettier"],
 
