@@ -22,9 +22,9 @@
     "docs"
   ],
   "scripts": {
-    "format": "yarn prettier '**/*.{hbs,js,json,yml}' --write",
+    "format": "yarn prettier \"**/*.{hbs,js,json,yml}\" --write",
     "lint": "npm-run-all lint:* --continue-on-error",
-    "lint:docs": "markdownlint 'docs/**/*.md'",
+    "lint:docs": "markdownlint \"**/*.md\"",
     "lint:js": "eslint . --cache",
     "release": "release-it",
     "test": "mocha --recursive"
