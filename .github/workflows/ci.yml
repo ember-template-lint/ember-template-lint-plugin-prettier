@@ -53,6 +53,25 @@ jobs:
 
       - run: yarn test
 
+  ember-template-lint:
+    name: ember-template-lint@${{ matrix.etlVersion }}
+    needs: [test]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    strategy:
+      matrix:
+        etlVersion: [^4.0.0, 5.0.0-alpha.0]
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: volta-cli/action@v1
+        with:
+          node-version: 16.x
+      - run: yarn install --frozen-lockfile
+      - run: yarn add ember-template-lint@${{ matrix.etlVersion }} --dev
+      - run: yarn test
+
   floating-dependencies:
     name: Floating Dependencies
     runs-on: ubuntu-latest

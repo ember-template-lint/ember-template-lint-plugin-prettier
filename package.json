@@ -33,7 +33,7 @@
     "prettier-linter-helpers": "^1.0.0"
   },
   "devDependencies": {
-    "ember-template-lint": "^4.0.0-beta.3",
+    "ember-template-lint": "^4.0.0",
     "eslint": "^8.2.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-node": "^11.0.0",
@@ -47,8 +47,8 @@
     "release-it-lerna-changelog": "^4.0.1"
   },
   "peerDependencies": {
-    "ember-template-lint": "^4.0.0",
-    "prettier": ">=1.18.1"
+    "ember-template-lint": ">= 4.0.0",
+    "prettier": ">= 1.18.1"
   },
   "engines": {
     "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
