@@ -61,7 +61,7 @@ jobs:
 
     strategy:
       matrix:
-        etlVersion: [^4.0.0, 5.0.0-alpha.0]
+        etlVersion: [^4.0.0, ^5.0.0]
 
     steps:
       - uses: actions/checkout@v3
