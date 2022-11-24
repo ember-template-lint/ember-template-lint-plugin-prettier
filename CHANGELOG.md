@@ -2,6 +2,23 @@
 
 
 
+
+## v4.1.0 (2022-11-24)
+
+#### :rocket: Enhancement
+* [#237](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/237) Allow `ember-template-lint` v5 ([@bertdeblock](https://github.com/bertdeblock))
+
+#### :house: Internal
+* [#245](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/245) Update to ember-template-lint v5 internally ([@bmish](https://github.com/bmish))
+* [#243](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/243) Ensure markdownlint runs on all files ([@bmish](https://github.com/bmish))
+* [#240](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/240) Use `@release-it-plugins/lerna-changelog` instead of `release-it-lerna-changelog` ([@bertdeblock](https://github.com/bertdeblock))
+* [#238](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/238) Update CI actions ([@bertdeblock](https://github.com/bertdeblock))
+* [#220](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/220) Add Node 18 to CI ([@bmish](https://github.com/bmish))
+
+#### Committers: 2
+- Bert De Block ([@bertdeblock](https://github.com/bertdeblock))
+- Bryan Mishkin ([@bmish](https://github.com/bmish))
+
 ## v4.0.0 (2022-01-06)
 
 #### :boom: Breaking Change
