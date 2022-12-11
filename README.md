@@ -1,5 +1,7 @@
 # ember-template-lint-plugin-prettier
 
+[![NPM version](https://img.shields.io/npm/v/ember-template-lint-plugin-prettier.svg?style=flat)](https://npmjs.org/package/ember-template-lint-plugin-prettier)
+
 It uses [Prettier](https://github.com/prettier/prettier) to lint your handlebars templates with [ember-template-lint](https://github.com/ember-template-lint/ember-template-lint). The plugin defines a - single - rule. That rule will compare your code with Prettier's output.
 
 Here is an output example:
