@@ -8,6 +8,7 @@ generateRuleTests({
   groupingMethod: describe,
   testMethod: it,
   plugins: [plugin],
+  config: true,
 
   good: [
     ``,
@@ -27,7 +28,6 @@ test
 
   bad: [
     {
-      config: true,
       template: "{{#my-component}}{{/my-component}}\n",
       fixedTemplate: "{{#my-component}}{{/my-component}}",
       result: {
@@ -41,15 +41,17 @@ test
       },
     },
     {
-      config: true,
+      config: {
+        singleQuote: true,
+      },
       template: `<div data-foo
  data-bar="lol"
       some-other-thing={{haha-morethaneightychars}}>
 </div>`,
-      fixedTemplate: `<div data-foo data-bar="lol" some-other-thing={{haha-morethaneightychars}}>
+      fixedTemplate: `<div data-foo data-bar='lol' some-other-thing={{haha-morethaneightychars}}>
 </div>`,
       result: {
-        message: 'Replace `⏎·data-bar="lol"⏎·····` with `·data-bar="lol"`',
+        message: "Replace `⏎·data-bar=\"lol\"⏎·····` with `·data-bar='lol'`",
         line: 1,
         column: 13,
         endLine: 3,
@@ -62,7 +64,6 @@ test
       },
     },
     {
-      config: true,
       template: "test\n",
       fixedTemplate: "test",
       result: {
@@ -76,7 +77,6 @@ test
       },
     },
     {
-      config: true,
       template: `{{#my-component}}
 
 test
@@ -98,7 +98,6 @@ test
       },
     },
     {
-      config: true,
       template: `{{#my-component class="class1 class2"}}
   test 
 
