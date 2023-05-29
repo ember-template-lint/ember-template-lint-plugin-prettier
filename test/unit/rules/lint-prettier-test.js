@@ -49,7 +49,7 @@ test
       fixedTemplate: `<div data-foo data-bar="lol" some-other-thing={{haha-morethaneightychars}}>
 </div>`,
       result: {
-        message: 'Replace `⏎·data-bar="lol"⏎·····` with ` data-bar="lol"`',
+        message: 'Replace `⏎·data-bar="lol"⏎·····` with `·data-bar="lol"`',
         line: 1,
         column: 13,
         endLine: 3,
