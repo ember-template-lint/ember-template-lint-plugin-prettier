@@ -3,6 +3,19 @@
 
 
 
+
+## v4.1.1 (2023-06-07)
+
+#### :bug: Bug Fix
+* [#261](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/261) Show invisible characters in replacement fix ([@patricklx](https://github.com/patricklx))
+
+#### :memo: Documentation
+* [#247](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/247) Add npm badge to readme ([@bmish](https://github.com/bmish))
+
+#### Committers: 2
+- Bryan Mishkin ([@bmish](https://github.com/bmish))
+- Patrick Pircher ([@patricklx](https://github.com/patricklx))
+
 ## v4.1.0 (2022-11-24)
 
 #### :rocket: Enhancement
