@@ -52,7 +52,6 @@ The recommended set will apply [these rules](https://github.com/ember-template-l
 Prettier can only be configured via [standard prettier config files](https://prettier.io/docs/en/configuration.html)
 It is not possible to pass prettier options with the rule options.
 
-
 ## Tips
 
 You may want to define these two scripts in your package.json:
