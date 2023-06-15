@@ -49,6 +49,7 @@ module.exports = {
 The recommended set will apply [these rules](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/blob/v1.1.0-beta.0/lib/config/recommended.js).
 
 ## Configure Prettier Options
+
 Prettier can only be configured via [standard prettier config files](https://prettier.io/docs/en/configuration.html)
 It is not possible to pass prettier options with the rule options.
 
