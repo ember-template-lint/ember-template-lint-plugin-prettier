@@ -4,6 +4,15 @@
 
 
 
+
+## v4.2.0 (2023-06-16)
+
+#### :rocket: Enhancement
+* [#259](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/259) Refactor to expose experimental hook for overriding prettier options ([@patricklx](https://github.com/patricklx))
+
+#### Committers: 1
+- Patrick Pircher ([@patricklx](https://github.com/patricklx))
+
 ## v4.1.1 (2023-06-07)
 
 #### :bug: Bug Fix
