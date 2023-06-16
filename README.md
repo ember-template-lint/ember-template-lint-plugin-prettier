@@ -48,6 +48,10 @@ module.exports = {
 
 The recommended set will apply [these rules](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/blob/v1.1.0-beta.0/lib/config/recommended.js).
 
+## Configuration
+
+Prettier can be configured via [standard prettier config files](https://prettier.io/docs/en/configuration.html).
+
 ## Tips
 
 You may want to define these two scripts in your package.json:
