@@ -18,7 +18,7 @@ error: Replace `New·Addons</h1>` with <h1>⏎New Addons⏎</h1>` (prettier/pret
 
 ## Compatibility
 
-- [Node.js](https://nodejs.org/) `^12.22.0 || ^14.17.0 || >=16.0.0`
+- [Node.js](https://nodejs.org/) `^16.0.0 || ^18.0.0 || >=20.0.0`
 - [ember-template-lint](https://github.com/ember-template-lint/ember-template-lint/) `>=4.0.0`
 - [prettier](https://prettier.io/) `>=1.18.1`
 
