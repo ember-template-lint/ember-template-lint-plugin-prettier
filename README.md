@@ -19,8 +19,11 @@ Here is an output example:
 - [ember-template-lint](https://github.com/ember-template-lint/ember-template-lint/) `>=4.0.0`
 - [prettier](https://prettier.io/) `>=3.0.0`
 
-Note: ember-template-lint-plugin-prettier@3 is compatible with older versions of
-ember-template-lint, in particular ember-template-lint@3.
+Note: ember-template-lint-plugin-prettier@4 is compatible with older versions of
+prettier, in particular prettier@2.
+
+Note2: ember-template-lint-plugin-prettier@3 is compatible with older versions
+of ember-template-lint, in particular ember-template-lint@3.
 
 ## Install
 
