@@ -7,14 +7,11 @@ It uses [Prettier](https://github.com/prettier/prettier) to lint your handlebars
 Here is an output example:
 
 ```handlebars
-error: Replace `New·Addons</h1>` with <h1>⏎New Addons⏎</h1>` (prettier/prettier) at app/templates/lists/new-addons.hbs:2:5:
-  1 | <div class="addons-index">
-> 2 |   <h1>New Addons</h1>
-  3 |   {{addon-list addons=model}}
-  4 | </div>
+2:18  error  Replace `·{{@lastName}}··` with `{{@lastName}}`  prettier
+  1 | <h1>A title</h1>
+> 2 | <p>{{@firstName}}  {{@lastName}}   , welcome!</p>
+  3 | <p>Text</p>
 ```
-
-> `./node_modules/.bin/ember-template-lint app/templates/lists/new-addons.hbs` (code from [emberobserver](https://github.com/emberobserver/client)).
 
 ## Compatibility
 
@@ -22,8 +19,11 @@ error: Replace `New·Addons</h1>` with <h1>⏎New Addons⏎</h1>` (prettier/pret
 - [ember-template-lint](https://github.com/ember-template-lint/ember-template-lint/) `>=4.0.0`
 - [prettier](https://prettier.io/) `>=3.0.0`
 
-Note: ember-template-lint-plugin-prettier@3 is compatible with older versions of
-ember-template-lint, in particular ember-template-lint@3.
+Note: ember-template-lint-plugin-prettier@4 is compatible with older versions of
+prettier, in particular prettier@2.
+
+Note2: ember-template-lint-plugin-prettier@3 is compatible with older versions
+of ember-template-lint, in particular ember-template-lint@3.
 
 ## Install
 
