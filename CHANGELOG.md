@@ -5,6 +5,20 @@
 
 
 
+
+## v5.0.0 (2023-07-13)
+
+#### :boom: Breaking Change
+* [#274](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/274) Support Prettier v3 ([@bertdeblock](https://github.com/bertdeblock))
+* [#275](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/275) Update Node support ([@bertdeblock](https://github.com/bertdeblock))
+
+#### :rocket: Enhancement
+* [#274](https://github.com/ember-template-lint/ember-template-lint-plugin-prettier/pull/274) Support Prettier v3 ([@bertdeblock](https://github.com/bertdeblock))
+
+#### Committers: 2
+- Bert De Block ([@bertdeblock](https://github.com/bertdeblock))
+- Cyrille David ([@dcyriller](https://github.com/dcyriller))
+
 ## v4.2.0 (2023-06-16)
 
 #### :rocket: Enhancement
