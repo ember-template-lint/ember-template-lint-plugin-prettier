@@ -30,7 +30,7 @@
     "test": "mocha --recursive"
   },
   "dependencies": {
-    "@prettier/sync": "^0.2.1",
+    "@prettier/sync": "^0.3.0",
     "prettier-linter-helpers": "^1.0.0"
   },
   "devDependencies": {
