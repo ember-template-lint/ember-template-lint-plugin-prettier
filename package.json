@@ -37,7 +37,7 @@
     "@release-it-plugins/lerna-changelog": "^5.0.0",
     "ember-template-lint": "^5.0.0",
     "eslint": "^8.2.0",
-    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "lerna-changelog": "^2.1.0",
