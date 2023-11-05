@@ -52,21 +52,6 @@ The recommended set will apply [these rules](https://github.com/ember-template-l
 
 Prettier can be configured via [standard prettier config files](https://prettier.io/docs/en/configuration.html).
 
-## Tips
-
-You may want to define these two scripts in your package.json:
-
-```json
-{
-  "scripts": {
-    "lint:hbs": "ember-template-lint .",
-    "format:hbs": "prettier **/*.hbs --write"
-  }
-}
-```
-
-`yarn lint:hbs` is useful in CI. `yarn format:hbs` will let you format your templates if your editor does not have this feature yet.
-
 ## Credits
 
 This plugin has been inspired by [the prettier plugin](https://github.com/prettier/eslint-plugin-prettier) for Eslint.
